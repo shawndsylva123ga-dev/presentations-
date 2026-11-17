@@ -1,0 +1,2541 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Christmas Special Experiences by Soul Travelling | Goa</title>
+
+  <!-- Tailwind CSS for responsive layout & utility styling -->
+  <script src="https://cdn.tailwindcss.com"></script>
+
+  <!-- Tone.js for optional delicate sleigh-bell & celesta holiday chimes -->
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/tone/14.8.49/Tone.js"></script>
+
+  <!-- Google Fonts: Cinzel & Playfair Display for luxury festive serifs, Plus Jakarta Sans for crisp readability -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@600;700;800&family=Playfair+Display:ital,wght@0,600;0,700;1,600&family=Plus+Jakarta+Sans:wght@400;500;600;700&display=swap" rel="stylesheet">
+
+  <script>
+    tailwind.config = {
+      theme: {
+        extend: {
+          colors: {
+            pine: '#061a13',
+            velvet: '#0b261c',
+            crimson: '#a61c26',
+            gold: '#e6b84c',
+            ivory: '#fdf8ef',
+          },
+          fontFamily: {
+            cinzel: ['Cinzel', 'serif'],
+            playfair: ['Playfair Display', 'serif'],
+            sans: ['Plus Jakarta Sans', 'sans-serif'],
+          }
+        }
+      }
+    }
+  </script>
+
+  <style>
+    :root {
+      --pine: #061a13;
+      --velvet: #0b261c;
+      --crimson: #a61c26;
+      --gold: #e6b84c;
+      --ivory: #fdf8ef;
+    }
+
+    * {
+      box-sizing: border-box;
+      -webkit-tap-highlight-color: transparent;
+    }
+
+    html, body {
+      margin: 0;
+      padding: 0;
+      width: 100%;
+      height: 100%;
+      background-color: var(--pine);
+      color: var(--ivory);
+      font-family: 'Plus Jakarta Sans', sans-serif;
+      overflow: hidden;
+      user-select: none;
+    }
+
+    /* Hide native OS cursor on precision desktop devices for custom Christmas Star tracker */
+    @media (hover: hover) and (pointer: fine) {
+      body.custom-cursor-active,
+      body.custom-cursor-active * {
+        cursor: none !important;
+      }
+    }
+
+    /* Luxury Goan Evergreen & Midnight Velvet Radial Backdrop */
+    .festive-bg {
+      background:
+        radial-gradient(circle at 18% 15%, rgba(166, 28, 38, 0.22) 0%, transparent 45%),
+        radial-gradient(circle at 82% 80%, rgba(230, 184, 76, 0.16) 0%, transparent 48%),
+        radial-gradient(circle at 50% 45%, #0e3124 0%, #061a13 78%, #030f0a 100%);
+    }
+
+    /* Subtle Indo-Portuguese Azulejo Geometric Lattice Overlay */
+    .azulejo-pattern {
+      background-image: url("data:image/svg+xml,%3Csvg width='80' height='80' viewBox='0 0 80 80' xmlns='http://www.w3.org/2000/svg'%3E%3Cg fill='none' stroke='%23e6b84c' stroke-width='0.75' stroke-opacity='0.09'%3E%3Cpath d='M40 0 L80 40 L40 80 L0 40 Z'/%3E%3Ccircle cx='40' cy='40' r='16'/%3E%3Ccircle cx='40' cy='40' r='5'/%3E%3Cpath d='M0 0 L20 20 M80 0 L60 20 M0 80 L20 60 M80 80 L60 60'/%3E%3C/g%3E%3C/svg%3E");
+      background-size: 80px 80px;
+    }
+
+    /* Glassmorphism Panels */
+    .glass-card {
+      background: linear-gradient(145deg, rgba(11, 38, 28, 0.78), rgba(6, 26, 19, 0.88));
+      backdrop-filter: blur(16px);
+      -webkit-backdrop-filter: blur(16px);
+      border: 1px solid rgba(230, 184, 76, 0.24);
+      box-shadow: 0 20px 50px rgba(0, 0, 0, 0.45), inset 0 1px 0 rgba(253, 248, 239, 0.08);
+    }
+
+    .glass-pill {
+      background: rgba(253, 248, 239, 0.06);
+      backdrop-filter: blur(10px);
+      -webkit-backdrop-filter: blur(10px);
+      border: 1px solid rgba(230, 184, 76, 0.28);
+      transition: all 0.28s cubic-bezier(0.22, 1, 0.36, 1);
+    }
+
+    .glass-pill:hover {
+      background: rgba(230, 184, 76, 0.16);
+      border-color: rgba(230, 184, 76, 0.65);
+      transform: translateY(-2px);
+    }
+
+    /* Twinkling Fairy Light Garland Animation */
+    @keyframes twinkleWarm {
+      0%, 100% { opacity: 0.45; transform: scale(0.92); filter: drop-shadow(0 0 3px currentColor); }
+      50% { opacity: 1; transform: scale(1.18); filter: drop-shadow(0 0 10px currentColor); }
+    }
+    .fairy-bulb {
+      animation: twinkleWarm var(--dur, 2.4s) ease-in-out infinite;
+      animation-delay: var(--delay, 0s);
+      transform-origin: center;
+    }
+
+    /* Gold Shimmer Text Gradient */
+    .gold-shimmer {
+      background: linear-gradient(92deg, #d89b28 0%, #fae094 35%, #e6b84c 65%, #fff2c2 85%, #d89b28 100%);
+      background-size: 220% auto;
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+      animation: shimmerSweep 6s linear infinite;
+    }
+
+    @keyframes shimmerSweep {
+      0% { background-position: 0% center; }
+      100% { background-position: 220% center; }
+    }
+
+    /* Slide Stage & 4 Animated Transition Modes */
+    #presentation-stage {
+      perspective: 1600px;
+      transform-style: preserve-3d;
+    }
+
+    .slide-panel {
+      position: absolute;
+      inset: 0;
+      opacity: 0;
+      pointer-events: none;
+      visibility: hidden;
+      will-change: transform, opacity, clip-path, filter;
+      overflow-y: auto;
+      overflow-x: hidden;
+      scrollbar-width: thin;
+      scrollbar-color: rgba(230, 184, 76, 0.35) transparent;
+    }
+
+    .slide-panel::-webkit-scrollbar {
+      width: 5px;
+    }
+    .slide-panel::-webkit-scrollbar-thumb {
+      background: rgba(230, 184, 76, 0.35);
+      border-radius: 999px;
+    }
+
+    .slide-panel.active {
+      opacity: 1;
+      pointer-events: auto;
+      visibility: visible;
+      z-index: 10;
+    }
+
+    /* Mode 1: 3D Sleigh-Glide & Parallax */
+    .mode-sleigh .slide-panel {
+      transition: transform 0.85s cubic-bezier(0.22, 1, 0.36, 1), opacity 0.65s ease, filter 0.65s ease;
+      transform: translate3d(8%, 0, -140px) rotateY(-8deg) scale(0.94);
+      filter: blur(4px);
+    }
+    .mode-sleigh .slide-panel.prev-exit {
+      transform: translate3d(-8%, 0, -140px) rotateY(8deg) scale(0.94);
+      opacity: 0;
+      filter: blur(4px);
+    }
+    .mode-sleigh .slide-panel.active {
+      transform: translate3d(0, 0, 0) rotateY(0deg) scale(1);
+      filter: blur(0px);
+    }
+
+    /* Mode 2: Anti-Gravity Levitate */
+    .mode-antigravity .slide-panel {
+      transition: transform 0.95s cubic-bezier(0.175, 0.885, 0.32, 1.15), opacity 0.65s ease;
+      transform: translate3d(0, 90px, 0) scale(0.92) rotate(-1.2deg);
+    }
+    .mode-antigravity .slide-panel.prev-exit {
+      transform: translate3d(0, -90px, 0) scale(1.04) rotate(1.2deg);
+      opacity: 0;
+    }
+    .mode-antigravity .slide-panel.active {
+      transform: translate3d(0, 0, 0) scale(1) rotate(0deg);
+    }
+
+    /* Mode 3: Snow-Curtain Reveal */
+    .mode-snow .slide-panel {
+      transition: clip-path 0.9s cubic-bezier(0.77, 0, 0.175, 1), opacity 0.7s ease, transform 0.9s ease;
+      clip-path: circle(0% at 50% 50%);
+      transform: scale(1.04);
+    }
+    .mode-snow .slide-panel.active {
+      clip-path: circle(145% at 50% 50%);
+      transform: scale(1);
+    }
+
+    /* Mode 4: Festive Flip */
+    .mode-flip .slide-panel {
+      transition: transform 0.85s cubic-bezier(0.25, 1, 0.5, 1), opacity 0.55s ease;
+      transform: rotateY(75deg) scale(0.88);
+      backface-visibility: hidden;
+    }
+    .mode-flip .slide-panel.prev-exit {
+      transform: rotateY(-75deg) scale(0.88);
+      opacity: 0;
+    }
+    .mode-flip .slide-panel.active {
+      transform: rotateY(0deg) scale(1);
+    }
+
+    /* Staggered Spring Entrance for Inner Slide Elements */
+    @keyframes springStaggerIn {
+      0% {
+        opacity: 0;
+        transform: translateY(22px) scale(0.96);
+      }
+      70% {
+        opacity: 1;
+        transform: translateY(-3px) scale(1.006);
+      }
+      100% {
+        opacity: 1;
+        transform: translateY(0) scale(1);
+      }
+    }
+
+    .slide-panel.active .stagger-item {
+      opacity: 0;
+      animation: springStaggerIn 0.72s cubic-bezier(0.22, 1, 0.36, 1) forwards;
+      animation-delay: calc(var(--stagger, 0) * 85ms + 120ms);
+    }
+
+    /* Visual Photo Frame 3D Tilt & Specular Sheen */
+    .visual-frame {
+      position: relative;
+      border-radius: 1.15rem;
+      overflow: hidden;
+      border: 1px solid rgba(230, 184, 76, 0.38);
+      background: #0a2219;
+      box-shadow: 0 14px 32px rgba(0, 0, 0, 0.45);
+      transform-style: preserve-3d;
+      transition: transform 0.25s ease-out, box-shadow 0.3s ease, border-color 0.3s ease;
+    }
+    .visual-frame:hover {
+      border-color: rgba(230, 184, 76, 0.85);
+      box-shadow: 0 20px 44px rgba(0, 0, 0, 0.6), 0 0 22px rgba(230, 184, 76, 0.22);
+    }
+    .visual-frame .sheen {
+      position: absolute;
+      inset: 0;
+      pointer-events: none;
+      background: radial-gradient(circle at var(--mx, 50%) var(--my, 50%), rgba(253, 248, 239, 0.22), transparent 60%);
+      opacity: 0;
+      transition: opacity 0.25s ease;
+    }
+    .visual-frame:hover .sheen {
+      opacity: 1;
+    }
+
+    /* Custom Christmas Cursor Tracker */
+    #cursor-halo {
+      position: fixed;
+      top: 0;
+      left: 0;
+      width: 44px;
+      height: 44px;
+      border-radius: 9999px;
+      border: 1.5px solid rgba(230, 184, 76, 0.65);
+      background: radial-gradient(circle, rgba(230, 184, 76, 0.16) 0%, transparent 70%);
+      pointer-events: none;
+      z-index: 9998;
+      transform: translate3d(-100px, -100px, 0);
+      transition: width 0.25s cubic-bezier(0.22, 1, 0.36, 1),
+                  height 0.25s cubic-bezier(0.22, 1, 0.36, 1),
+                  border-color 0.25s ease,
+                  background 0.25s ease;
+    }
+
+    #cursor-halo.hovering {
+      width: 64px;
+      height: 64px;
+      border-color: #fae094;
+      background: radial-gradient(circle, rgba(166, 28, 38, 0.28) 0%, rgba(230, 184, 76, 0.14) 65%, transparent 100%);
+      box-shadow: 0 0 20px rgba(230, 184, 76, 0.35);
+    }
+
+    #christmas-cursor {
+      position: fixed;
+      top: 0;
+      left: 0;
+      width: 30px;
+      height: 30px;
+      pointer-events: none;
+      z-index: 9999;
+      transform: translate3d(-100px, -100px, 0);
+      filter: drop-shadow(0 2px 8px rgba(230, 184, 76, 0.65));
+    }
+
+    @media (hover: none), (pointer: coarse) {
+      #christmas-cursor,
+      #cursor-halo {
+        display: none !important;
+      }
+    }
+
+    /* Itinerary Step Hover Accent */
+    .itinerary-step {
+      transition: transform 0.25s ease, background-color 0.25s ease, border-color 0.25s ease;
+    }
+    .itinerary-step:hover {
+      transform: translateX(6px);
+      background-color: rgba(230, 184, 76, 0.12);
+      border-color: rgba(230, 184, 76, 0.45);
+    }
+  </style>
+</head>
+
+<body class="festive-bg azulejo-pattern custom-cursor-active flex flex-col justify-between h-screen w-screen overflow-hidden">
+
+  <!-- LAYER 1: 60FPS ANTI-GRAVITY PHYSICS & HOLIDAY PARTICLE CANVAS -->
+  <canvas id="antigravity-canvas" class="fixed inset-0 w-full h-full pointer-events-none z-0"></canvas>
+
+  <!-- LAYER 2: TOP TWINKLING FAIRY LIGHTS & PRESENTER HEADER -->
+  <header class="relative z-30 w-full px-3 sm:px-6 pt-2 pb-1.5 flex flex-col gap-1.5 shrink-0">
+    <!-- Twinkling Fairy Light Garland SVG -->
+    <div class="w-full h-5 overflow-hidden pointer-events-none opacity-90" aria-hidden="true">
+      <svg class="w-full h-full" viewBox="0 0 1440 28" preserveAspectRatio="none">
+        <path d="M0,4 Q180,22 360,6 T720,8 T1080,6 T1440,8" fill="none" stroke="rgba(230,184,76,0.45)" stroke-width="1.4"/>
+        <g id="fairy-bulbs-group"></g>
+      </svg>
+    </div>
+
+    <!-- Navigation & Physics Controls Bar -->
+    <div class="max-w-7xl w-full mx-auto flex flex-wrap items-center justify-between gap-2 glass-card rounded-2xl px-3.5 py-2">
+      <!-- Brand Emblem -->
+      <button onclick="goToSlide(0)" data-interactive class="flex items-center gap-2.5 text-left group focus:outline-none">
+        <div class="w-9 h-9 rounded-xl bg-gradient-to-br from-crimson via-[#83131b] to-pine border border-gold/50 flex items-center justify-center shadow-lg group-hover:scale-105 transition-transform">
+          <!-- Goan Christmas Star + Palm Emblem -->
+          <svg class="w-5 h-5 text-gold" viewBox="0 0 24 24" fill="currentColor">
+            <path d="M12 1L14.4 8.6L22 11L14.4 13.4L12 21L9.6 13.4L2 11L9.6 8.6L12 1Z"/>
+            <circle cx="12" cy="11" r="2.2" fill="#fdf8ef"/>
+          </svg>
+        </div>
+        <div>
+          <div class="font-cinzel text-xs sm:text-sm font-bold tracking-[0.2em] text-gold leading-none">SOUL TRAVELLING</div>
+          <div class="text-[10px] sm:text-[11px] text-ivory/75 tracking-wider uppercase mt-0.5">Goa Christmas Specials</div>
+        </div>
+      </button>
+
+      <!-- Center / Right Controls -->
+      <div class="flex flex-wrap items-center gap-1.5 sm:gap-2">
+        <!-- Slide Transition Selector -->
+        <div class="hidden md:flex items-center gap-1.5 glass-pill rounded-xl px-2.5 py-1 text-xs">
+          <span class="text-gold/80 font-medium">Transition:</span>
+          <select id="transition-select" onchange="setTransitionMode(this.value)" data-interactive
+                  class="bg-transparent text-ivory font-semibold focus:outline-none cursor-pointer">
+            <option value="mode-sleigh" class="bg-pine text-ivory">3D Sleigh-Glide</option>
+            <option value="mode-antigravity" class="bg-pine text-ivory">Anti-Gravity Levitate</option>
+            <option value="mode-snow" class="bg-pine text-ivory">Snow-Curtain Reveal</option>
+            <option value="mode-flip" class="bg-pine text-ivory">Festive Flip</option>
+          </select>
+        </div>
+
+        <!-- Anti-Gravity Field Mode Toggle -->
+        <button id="gravity-mode-btn" onclick="cycleGravityMode()" data-interactive
+                title="Cycle Anti-Gravity Physics Field"
+                class="glass-pill rounded-xl px-2.5 py-1.5 text-xs font-semibold text-ivory flex items-center gap-1.5">
+          <span class="w-2 h-2 rounded-full bg-gold animate-ping"></span>
+          <span class="hidden sm:inline text-gold/85">Zero-G:</span>
+          <span id="gravity-mode-label">Repel</span>
+        </button>
+
+        <!-- Python & Anti-Gravity Physics Lab Modal Button -->
+        <button onclick="toggleModal('physics-modal', true)" data-interactive
+                title="Open Anti-Gravity Physics & Python Script Inspector"
+                class="glass-pill rounded-xl px-2.5 py-1.5 text-xs font-semibold text-gold flex items-center gap-1">
+          <svg class="w-3.5 h-3.5" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+            <polyline points="16 18 22 12 16 6"></polyline>
+            <polyline points="8 6 2 12 8 18"></polyline>
+          </svg>
+          <span class="hidden lg:inline">Physics & Py</span>
+        </button>
+
+        <!-- Optional Festive Chimes Toggle -->
+        <button id="audio-toggle-btn" onclick="toggleAudioChimes()" data-interactive
+                title="Toggle Holiday Celesta & Sleigh Bell Chimes"
+                class="glass-pill rounded-xl p-1.5 text-ivory/80 hover:text-gold">
+          <svg id="audio-icon-off" class="w-4 h-4" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+            <path d="M11 5L6 9H2v6h4l5 4V5z"></path>
+            <line x1="23" y1="9" x2="17" y2="15"></line>
+            <line x1="17" y1="9" x2="23" y2="15"></line>
+          </svg>
+          <svg id="audio-icon-on" class="w-4 h-4 hidden text-gold" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+            <path d="M11 5L6 9H2v6h4l5 4V5z"></path>
+            <path d="M15.54 8.46a5 5 0 0 1 0 7.07"></path>
+            <path d="M19.07 4.93a10 10 0 0 1 0 14.14"></path>
+          </svg>
+        </button>
+
+        <!-- All Slides Overview Grid -->
+        <button onclick="toggleModal('overview-modal', true)" data-interactive
+                title="All Slides Grid Overview"
+                class="glass-pill rounded-xl px-2.5 py-1.5 text-xs font-semibold text-ivory flex items-center gap-1.5">
+          <svg class="w-3.5 h-3.5 text-gold" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+            <rect x="3" y="3" width="7" height="7" rx="1.5"></rect>
+            <rect x="14" y="3" width="7" height="7" rx="1.5"></rect>
+            <rect x="3" y="14" width="7" height="7" rx="1.5"></rect>
+            <rect x="14" y="14" width="7" height="7" rx="1.5"></rect>
+          </svg>
+          <span class="hidden sm:inline">Slides</span>
+        </button>
+
+        <!-- Fullscreen Toggle -->
+        <button onclick="toggleFullScreen()" data-interactive
+                title="Toggle Fullscreen (F)"
+                class="glass-pill rounded-xl p-1.5 text-ivory/85 hover:text-gold">
+          <svg class="w-4 h-4" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+            <path d="M8 3H5a2 2 0 0 0-2 2v3m18 0V5a2 2 0 0 0-2-2h-3m0 18h3a2 2 0 0 0 2-2v-3M3 16v3a2 2 0 0 0 2 2h3"/>
+          </svg>
+        </button>
+
+        <!-- Slide Counter Badge -->
+        <div class="px-2.5 py-1 rounded-xl bg-crimson/85 border border-gold/40 font-cinzel text-xs font-bold text-ivory tracking-wider">
+          <span id="slide-counter">01 / 09</span>
+        </div>
+      </div>
+    </div>
+  </header>
+
+  <!-- LAYER 3: MAIN INTERACTIVE SLIDE PRESENTATION STAGE -->
+  <main id="presentation-stage" class="relative z-20 flex-1 w-full max-w-7xl mx-auto px-3 sm:px-6 my-1 mode-sleigh">
+    <!-- Slides 1 through 9 are injected cleanly by JavaScript -->
+  </main>
+
+  <!-- LAYER 4: BOTTOM FLOATING GLASSMORPHIC PRESENTER HUD -->
+  <footer class="relative z-30 w-full px-3 sm:px-6 pb-3 pt-1 shrink-0">
+    <div class="max-w-4xl mx-auto glass-card rounded-2xl px-3 sm:px-5 py-2 flex items-center justify-between gap-2">
+      <!-- Previous Button -->
+      <button id="prev-btn" onclick="prevSlide()" data-interactive
+              class="glass-pill rounded-xl px-3 sm:px-4 py-2 text-xs sm:text-sm font-semibold text-ivory flex items-center gap-1.5 disabled:opacity-40">
+        <svg class="w-4 h-4 text-gold" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2">
+          <polyline points="15 18 9 12 15 6"></polyline>
+        </svg>
+        <span class="hidden sm:inline">Previous</span>
+      </button>
+
+      <!-- Slide Progress Dots with Hover Tooltips -->
+      <div id="slide-dots" class="flex items-center gap-1.5 sm:gap-2.5"></div>
+
+      <!-- Auto-Play + Next Button Group -->
+      <div class="flex items-center gap-2">
+        <button id="autoplay-btn" onclick="toggleAutoPlay()" data-interactive
+                title="Auto-Play Presentation (6s per slide)"
+                class="glass-pill rounded-xl px-2.5 sm:px-3 py-2 text-xs font-semibold text-ivory/90 flex items-center gap-1.5">
+          <span id="autoplay-dot" class="w-2 h-2 rounded-full bg-ivory/40"></span>
+          <span class="hidden md:inline" id="autoplay-label">Auto-Play</span>
+        </button>
+
+        <button id="next-btn" onclick="nextSlide()" data-interactive
+                class="rounded-xl px-3.5 sm:px-5 py-2 text-xs sm:text-sm font-bold text-pine bg-gradient-to-r from-[#f3cf7a] via-gold to-[#d49b2a] hover:brightness-110 shadow-lg shadow-gold/20 flex items-center gap-1.5 transition-all">
+          <span>Next</span>
+          <svg class="w-4 h-4" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4">
+            <polyline points="9 18 15 12 9 6"></polyline>
+          </svg>
+        </button>
+      </div>
+    </div>
+  </footer>
+
+  <!-- LAYER 5A: ALL SLIDES GRID OVERVIEW MODAL -->
+  <div id="overview-modal" class="fixed inset-0 z-50 hidden items-center justify-center bg-black/80 backdrop-blur-md p-4">
+    <div class="glass-card rounded-3xl max-w-5xl w-full max-h-[88vh] flex flex-col overflow-hidden border border-gold/40">
+      <div class="px-6 py-4 border-b border-gold/20 flex items-center justify-between">
+        <div>
+          <h2 class="font-cinzel text-lg sm:text-xl font-bold text-gold">Soul Travelling • Festive Deck Overview</h2>
+          <p class="text-xs text-ivory/75">Select any slide to jump directly into the experience</p>
+        </div>
+        <button onclick="toggleModal('overview-modal', false)" data-interactive class="glass-pill rounded-xl p-2 text-ivory hover:text-gold">
+          <svg class="w-5 h-5" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+            <line x1="18" y1="6" x2="6" y2="18"></line>
+            <line x1="6" y1="6" x2="18" y2="18"></line>
+          </svg>
+        </button>
+      </div>
+      <div id="overview-grid" class="p-5 overflow-y-auto grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-4"></div>
+    </div>
+  </div>
+
+  <!-- LAYER 5B: LIGHTBOX ILLUSTRATION / PHOTO INSPECTOR MODAL -->
+  <div id="lightbox-modal" class="fixed inset-0 z-50 hidden items-center justify-center bg-black/85 backdrop-blur-md p-4" onclick="if(event.target===this) toggleModal('lightbox-modal', false)">
+    <div class="glass-card rounded-3xl max-w-4xl w-full overflow-hidden border border-gold/50 shadow-2xl">
+      <div class="px-5 py-3.5 border-b border-gold/20 flex items-center justify-between">
+        <div>
+          <span id="lightbox-tag" class="text-[11px] uppercase tracking-widest text-gold font-semibold"></span>
+          <h3 id="lightbox-title" class="font-playfair text-base sm:text-lg font-bold text-ivory"></h3>
+        </div>
+        <button onclick="toggleModal('lightbox-modal', false)" data-interactive class="glass-pill rounded-xl p-2 text-ivory hover:text-gold">
+          <svg class="w-5 h-5" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+            <line x1="18" y1="6" x2="6" y2="18"></line>
+            <line x1="6" y1="6" x2="18" y2="18"></line>
+          </svg>
+        </button>
+      </div>
+      <div id="lightbox-content" class="p-4 sm:p-6 flex items-center justify-center bg-pine/70 max-h-[75vh] overflow-auto"></div>
+    </div>
+  </div>
+
+  <!-- LAYER 5C: ANTI-GRAVITY PHYSICS & PYTHON ENGINE MODAL -->
+  <div id="physics-modal" class="fixed inset-0 z-50 hidden items-center justify-center bg-black/80 backdrop-blur-md p-4" onclick="if(event.target===this) toggleModal('physics-modal', false)">
+    <div class="glass-card rounded-3xl max-w-3xl w-full max-h-[88vh] flex flex-col overflow-hidden border border-gold/45">
+      <div class="px-6 py-4 border-b border-gold/20 flex items-center justify-between">
+        <div>
+          <h2 class="font-cinzel text-lg font-bold text-gold">Anti-Gravity Holiday Physics & Python Model</h2>
+          <p class="text-xs text-ivory/75">Tune the live 60fps buoyancy & cursor force field or inspect the Python simulation</p>
+        </div>
+        <button onclick="toggleModal('physics-modal', false)" data-interactive class="glass-pill rounded-xl p-2 text-ivory hover:text-gold">
+          <svg class="w-5 h-5" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+            <line x1="18" y1="6" x2="6" y2="18"></line>
+            <line x1="6" y1="6" x2="18" y2="18"></line>
+          </svg>
+        </button>
+      </div>
+      <div class="p-5 overflow-y-auto space-y-5 text-sm">
+        <!-- Interactive Live Sliders -->
+        <div class="grid grid-cols-1 sm:grid-cols-3 gap-4">
+          <div class="glass-pill rounded-2xl p-3.5">
+            <div class="flex justify-between text-xs mb-1.5">
+              <span class="text-ivory/80">Anti-Gravity Lift (-g)</span>
+              <span id="val-buoyancy" class="text-gold font-bold">0.85</span>
+            </div>
+            <input type="range" min="0.1" max="2.2" step="0.05" value="0.85" data-interactive
+                   oninput="updatePhysicsParam('buoyancy', this.value)"
+                   class="w-full accent-[#e6b84c]" />
+          </div>
+          <div class="glass-pill rounded-2xl p-3.5">
+            <div class="flex justify-between text-xs mb-1.5">
+              <span class="text-ivory/80">Cursor Force Radius</span>
+              <span id="val-radius" class="text-gold font-bold">190px</span>
+            </div>
+            <input type="range" min="80" max="360" step="10" value="190" data-interactive
+                   oninput="updatePhysicsParam('radius', this.value)"
+                   class="w-full accent-[#e6b84c]" />
+          </div>
+          <div class="glass-pill rounded-2xl p-3.5">
+            <div class="flex justify-between text-xs mb-1.5">
+              <span class="text-ivory/80">Vortex Swirl Torque</span>
+              <span id="val-swirl" class="text-gold font-bold">1.20</span>
+            </div>
+            <input type="range" min="0" max="3.0" step="0.1" value="1.2" data-interactive
+                   oninput="updatePhysicsParam('swirl', this.value)"
+                   class="w-full accent-[#e6b84c]" />
+          </div>
+        </div>
+
+        <!-- Companion Python Anti-Gravity Simulation Reference -->
+        <div class="rounded-2xl bg-[#030f0a] border border-gold/25 p-4">
+          <div class="flex items-center justify-between mb-2">
+            <span class="text-xs font-mono text-gold">soul_travelling_antigravity.py (NumPy Vector Field)</span>
+            <button onclick="copyPythonCode()" data-interactive class="glass-pill rounded-lg px-2.5 py-1 text-xs text-ivory hover:text-gold">Copy Python</button>
+          </div>
+          <pre id="python-snippet" class="text-[11px] sm:text-xs font-mono text-emerald-200/90 overflow-x-auto leading-relaxed">import numpy as np
+
+class ChristmasAntiGravityField:
+    """Vectorized 2D Anti-Gravity Buoyancy & Cursor Vortex Field."""
+    def __init__(self, n_ornaments=65, lift=-0.85, radius=190.0):
+        self.pos = np.random.uniform([0, 0], [1920, 1080], (n_ornaments, 2))
+        self.vel = np.zeros((n_ornaments, 2))
+        self.lift = lift          # Negative gravity => upward harmonic buoyancy
+        self.radius = radius
+
+    def step(self, cursor_xy, mode="repel", dt=0.016):
+        delta = self.pos - np.asarray(cursor_xy)
+        dist = np.linalg.norm(delta, axis=1, keepdims=True) + 1e-5
+        mask = (dist < self.radius).astype(float)
+        falloff = (1.0 - dist / self.radius) * mask
+
+        radial = delta / dist
+        tangential = np.hstack([-radial[:, 1:2], radial[:, 0:1]])
+        force = radial * (420.0 if mode == "repel" else -160.0) + tangential * 280.0
+
+        self.vel = self.vel * 0.94 + (force * falloff + [0.0, self.lift * 35.0]) * dt
+        self.pos = (self.pos + self.vel * dt) % [1920, 1080]
+        return self.pos</pre>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- LAYER 5D: TOAST NOTIFICATION BANNER -->
+  <div id="toast-banner" class="fixed top-20 left-1/2 -translate-x-1/2 z-50 pointer-events-none opacity-0 transition-all duration-300 transform -translate-y-3">
+    <div class="glass-card border border-gold/60 rounded-2xl px-4 py-2.5 text-xs sm:text-sm font-semibold text-ivory shadow-2xl flex items-center gap-2">
+      <span class="text-gold text-base">✦</span>
+      <span id="toast-message">Notification</span>
+    </div>
+  </div>
+
+  <!-- LAYER 6: CUSTOM CHRISTMAS STAR & SLEIGH BELL CURSOR TRACKER -->
+  <div id="cursor-halo"></div>
+  <div id="christmas-cursor" aria-hidden="true">
+    <svg viewBox="0 0 36 36" class="w-full h-full overflow-visible">
+      <!-- Radiant 8-Point Bethlehem / Goan Christmas Star -->
+      <defs>
+        <radialGradient id="starGrad" cx="50%" cy="50%" r="50%">
+          <stop offset="0%" stop-color="#fff8dc"/>
+          <stop offset="55%" stop-color="#e6b84c"/>
+          <stop offset="100%" stop-color="#b87d14"/>
+        </radialGradient>
+      </defs>
+      <path d="M18 1 L21.2 12.8 L33 16 L21.2 19.2 L18 31 L14.8 19.2 L3 16 L14.8 12.8 Z"
+            fill="url(#starGrad)" stroke="#fdf8ef" stroke-width="0.9"/>
+      <path d="M18 6 L19.8 14.2 L28 16 L19.8 17.8 L18 26 L16.2 17.8 L8 16 L16.2 14.2 Z"
+            fill="#fffdf5" opacity="0.85"/>
+      <!-- Festive Crimson Sleigh Bell Accent -->
+      <circle cx="25" cy="25" r="4.5" fill="#a61c26" stroke="#e6b84c" stroke-width="1.1"/>
+      <circle cx="24" cy="24" r="1.1" fill="#fdf8ef" opacity="0.8"/>
+    </svg>
+  </div>
+
+  <script>
+    /**
+     * ============================================================================
+     * 1. BESPOKE SVG / CANVAS ILLUSTRATED SCENES (MATCHING ALL 9 PDF PAGES)
+     * ============================================================================
+     */
+    const SCENE_ILLUSTRATIONS = {
+      /* SLIDE 2 - Card 1: Traditional Goan Kuswar Platter (Bebinca, Rose Cookies, Kulkuls, Dodol, Diya) */
+      kuswar_platter: `
+        <svg viewBox="0 0 640 400" class="w-full h-full object-cover" xmlns="http://www.w3.org/2000/svg">
+          <defs>
+            <radialGradient id="warmRoom" cx="50%" cy="35%" r="70%">
+              <stop offset="0%" stop-color="#3a2214"/>
+              <stop offset="65%" stop-color="#1a0e08"/>
+              <stop offset="100%" stop-color="#0d0704"/>
+            </radialGradient>
+            <radialGradient id="diyaGlow" cx="50%" cy="50%" r="50%">
+              <stop offset="0%" stop-color="#ffea85" stop-opacity="0.95"/>
+              <stop offset="45%" stop-color="#ff8c1a" stop-opacity="0.45"/>
+              <stop offset="100%" stop-color="#ff8c1a" stop-opacity="0"/>
+            </radialGradient>
+          </defs>
+          <rect width="640" height="400" fill="url(#warmRoom)"/>
+          <!-- Bokeh Fairy Lights in Background -->
+          <g opacity="0.85">
+            <circle cx="110" cy="85" r="10" fill="#ffe699" opacity="0.6"/>
+            <circle cx="155" cy="92" r="13" fill="#ffd269" opacity="0.75"/>
+            <circle cx="205" cy="82" r="9" fill="#fff0b3" opacity="0.55"/>
+            <circle cx="250" cy="95" r="14" fill="#ffcf5c" opacity="0.8"/>
+            <circle cx="305" cy="88" r="11" fill="#ffe699" opacity="0.65"/>
+            <circle cx="360" cy="78" r="13" fill="#ffd269" opacity="0.7"/>
+            <circle cx="415" cy="94" r="10" fill="#fff0b3" opacity="0.6"/>
+          </g>
+          <!-- Christmas Tree Silhouette Right -->
+          <path d="M520 30 L450 150 L485 150 L435 250 L605 250 L555 150 L590 150 Z" fill="#0d2e1e"/>
+          <circle cx="515" cy="125" r="11" fill="#c41e2a"/>
+          <circle cx="545" cy="185" r="12" fill="#e6b84c"/>
+          <circle cx="485" cy="205" r="10" fill="#c41e2a"/>
+          <!-- Rustic Dark Wood Table -->
+          <rect x="0" y="220" width="640" height="180" fill="#2b1910"/>
+          <line x1="0" y1="265" x2="640" y2="265" stroke="#1c0f09" stroke-width="2"/>
+          <line x1="0" y1="325" x2="640" y2="325" stroke="#1c0f09" stroke-width="2"/>
+          <!-- Glowing Terracotta Diya -->
+          <circle cx="110" cy="195" r="46" fill="url(#diyaGlow)"/>
+          <path d="M82 212 Q110 232 138 212 Z" fill="#8f3d1e"/>
+          <path d="M110 175 Q118 194 110 206 Q102 194 110 175 Z" fill="#fff5b8"/>
+          <!-- Wooden Kuswar Platter -->
+          <ellipse cx="330" cy="312" rx="235" ry="62" fill="#4f2d18" stroke="#6e4023" stroke-width="3"/>
+          <ellipse cx="330" cy="304" rx="222" ry="52" fill="#63381e"/>
+          <!-- Layered Goan Bebinca -->
+          <g transform="translate(195, 252)">
+            <polygon points="0,35 72,18 118,40 46,58" fill="#d98a2b"/>
+            <polygon points="0,35 46,58 46,84 0,60" fill="#7a3b14"/>
+            <polygon points="46,58 118,40 118,66 46,84" fill="#9c4d1c"/>
+            <line x1="0" y1="43" x2="46" y2="66" stroke="#f0b659" stroke-width="2.5"/>
+            <line x1="0" y1="51" x2="46" y2="74" stroke="#f0b659" stroke-width="2.5"/>
+            <line x1="46" y1="66" x2="118" y2="48" stroke="#f0b659" stroke-width="2.5"/>
+            <line x1="46" y1="74" x2="118" y2="56" stroke="#f0b659" stroke-width="2.5"/>
+          </g>
+          <!-- Pink Goan Rose Cookies (Kokis) -->
+          <g transform="translate(345, 265)">
+            <circle cx="0" cy="0" r="24" fill="#d93848" stroke="#ff8fa0" stroke-width="2"/>
+            <circle cx="0" cy="0" r="14" fill="none" stroke="#ff9aa8" stroke-width="2.2"/>
+            <circle cx="0" cy="0" r="5" fill="#991b27"/>
+          </g>
+          <g transform="translate(396, 276)">
+            <circle cx="0" cy="0" r="24" fill="#e04353" stroke="#ff9aa8" stroke-width="2"/>
+            <circle cx="0" cy="0" r="14" fill="none" stroke="#ffb3be" stroke-width="2.2"/>
+            <circle cx="0" cy="0" r="5" fill="#991b27"/>
+          </g>
+          <!-- Golden Kulkuls & Dodol -->
+          <ellipse cx="165" cy="296" rx="22" ry="14" fill="#e8a838" stroke="#ffd27d" stroke-width="1.5"/>
+          <ellipse cx="458" cy="292" rx="24" ry="15" fill="#e8a838" stroke="#ffd27d" stroke-width="1.5"/>
+          <ellipse cx="422" cy="316" rx="24" ry="15" fill="#f0b94d" stroke="#ffe09e" stroke-width="1.5"/>
+          <ellipse cx="368" cy="326" rx="25" ry="15" fill="#e8a838" stroke="#ffd27d" stroke-width="1.5"/>
+          <!-- Dark Rich Dodol with Cashew -->
+          <ellipse cx="242" cy="326" rx="24" ry="15" fill="#36180c" stroke="#5c2b17" stroke-width="1.5"/>
+          <ellipse cx="242" cy="320" rx="6" ry="3.5" fill="#f5deb3"/>
+          <ellipse cx="302" cy="328" rx="24" ry="15" fill="#36180c" stroke="#5c2b17" stroke-width="1.5"/>
+          <ellipse cx="302" cy="322" rx="6" ry="3.5" fill="#f5deb3"/>
+          <!-- White Baath / Coconut Cake Diamonds -->
+          <polygon points="465,244 505,236 525,252 485,260" fill="#f5e6c8" stroke="#d9c091"/>
+          <polygon points="488,264 528,256 548,272 508,280" fill="#edd8b4" stroke="#d9c091"/>
+        </svg>
+      `,
+
+      /* SLIDE 2 - Card 2: Santa-Hatted Soul Travelling Hosts Baking in Goan Kitchen */
+      bakehouse_hosts: `
+        <svg viewBox="0 0 640 400" class="w-full h-full object-cover" xmlns="http://www.w3.org/2000/svg">
+          <rect width="640" height="400" fill="#c94a18"/>
+          <!-- Warm Terracotta Goan Kitchen Wall & Window -->
+          <rect x="0" y="0" width="210" height="400" fill="#b33d10"/>
+          <rect x="330" y="30" width="110" height="145" rx="6" fill="#e8f5e9" stroke="#4e2a18" stroke-width="6"/>
+          <line x1="385" y1="30" x2="385" y2="175" stroke="#4e2a18" stroke-width="4"/>
+          <line x1="330" y1="102" x2="440" y2="102" stroke="#4e2a18" stroke-width="4"/>
+          <!-- Mini Christmas Tree Left -->
+          <polygon points="45,120 12,230 78,230" fill="#13422b"/>
+          <circle cx="45" cy="165" r="5" fill="#ffd54f"/>
+          <circle cx="32" cy="200" r="5" fill="#ff5252"/>
+          <circle cx="58" cy="205" r="5" fill="#ffd54f"/>
+          <!-- Three Santa-Hatted Soul Travelling Bakers -->
+          <!-- Host 1 -->
+          <g transform="translate(155, 115)">
+            <ellipse cx="0" cy="145" rx="52" ry="85" fill="#8c5865"/>
+            <rect x="-34" y="95" width="68" height="125" rx="10" fill="#171717"/>
+            <text x="0" y="155" text-anchor="middle" fill="#e6b84c" font-family="Cinzel,serif" font-size="11" font-weight="bold">Soul</text>
+            <circle cx="0" cy="35" r="28" fill="#d49b76"/>
+            <path d="M-28 24 Q0 -18 28 24 Z" fill="#c62828"/>
+            <rect x="-30" y="20" width="60" height="10" rx="5" fill="#ffffff"/>
+            <circle cx="28" cy="8" r="7" fill="#ffffff"/>
+          </g>
+          <!-- Host 2 -->
+          <g transform="translate(320, 110)">
+            <ellipse cx="0" cy="145" rx="56" ry="85" fill="#1f1f1f"/>
+            <rect x="-38" y="95" width="76" height="125" rx="10" fill="#111111" stroke="#333"/>
+            <text x="0" y="150" text-anchor="middle" fill="#e6b84c" font-family="Cinzel,serif" font-size="12" font-weight="bold">Soul</text>
+            <circle cx="0" cy="35" r="28" fill="#c68863"/>
+            <rect x="-18" y="28" width="14" height="10" rx="2" fill="none" stroke="#111" stroke-width="2"/>
+            <rect x="4" y="28" width="14" height="10" rx="2" fill="none" stroke="#111" stroke-width="2"/>
+            <path d="M-28 22 Q0 -16 28 22 Z" fill="#c62828"/>
+            <rect x="-30" y="18" width="60" height="10" rx="5" fill="#ffffff"/>
+            <circle cx="29" cy="10" r="7" fill="#ffffff"/>
+          </g>
+          <!-- Host 3 -->
+          <g transform="translate(490, 102)">
+            <ellipse cx="0" cy="150" rx="58" ry="90" fill="#9eb897"/>
+            <rect x="-36" y="95" width="72" height="130" rx="10" fill="#141414"/>
+            <text x="0" y="152" text-anchor="middle" fill="#e6b84c" font-family="Cinzel,serif" font-size="12" font-weight="bold">Soul</text>
+            <circle cx="0" cy="34" r="29" fill="#8d5538"/>
+            <path d="M-28 20 Q0 -16 28 20 Z" fill="#c62828"/>
+            <rect x="-30" y="16" width="60" height="10" rx="5" fill="#ffffff"/>
+          </g>
+          <!-- Baking Counter & Golden Cake Batter Mixing Bowl -->
+          <rect x="0" y="315" width="640" height="85" fill="#f5efe6"/>
+          <path d="M185 305 Q250 375 315 305 Z" fill="rgba(215, 235, 245, 0.65)" stroke="#90a4ae" stroke-width="2"/>
+          <path d="M198 324 Q250 366 302 324 Z" fill="#d98218"/>
+          <line x1="210" y1="265" x2="256" y2="335" stroke="#263238" stroke-width="5" stroke-linecap="round"/>
+          <path d="M365 305 Q415 360 465 305 Z" fill="#cfd8dc" stroke="#78909c" stroke-width="2"/>
+        </svg>
+      `,
+
+      /* SLIDE 3 - Card 1: White-Washed Saligao Chapel & Coconut Palms */
+      saligao_chapel: `
+        <svg viewBox="0 0 640 400" class="w-full h-full object-cover" xmlns="http://www.w3.org/2000/svg">
+          <defs>
+            <linearGradient id="goaSky" x1="0%" y1="0%" x2="0%" y2="100%">
+              <stop offset="0%" stop-color="#dfeee6"/>
+              <stop offset="100%" stop-color="#b9d6c5"/>
+            </linearGradient>
+          </defs>
+          <rect width="640" height="400" fill="url(#goaSky)"/>
+          <!-- Lush Tropical Canopy & Palms -->
+          <circle cx="110" cy="120" r="130" fill="#234d2c"/>
+          <circle cx="530" cy="110" r="145" fill="#1e4426"/>
+          <circle cx="320" cy="70" r="110" fill="#2e5e36"/>
+          <!-- White Goan Chapel -->
+          <g transform="translate(215, 78)">
+            <!-- Cross -->
+            <rect x="102" y="0" width="6" height="24" fill="#ffffff"/>
+            <rect x="95" y="7" width="20" height="5" fill="#ffffff"/>
+            <!-- Gable Pediment -->
+            <polygon points="35,95 105,22 175,95" fill="#f9fbf9" stroke="#cfd8dc" stroke-width="2"/>
+            <!-- Side Finials -->
+            <rect x="24" y="78" width="16" height="35" fill="#f4f7f4"/>
+            <polygon points="24,78 32,62 40,78" fill="#e0e6e1"/>
+            <rect x="170" y="78" width="16" height="35" fill="#f4f7f4"/>
+            <polygon points="170,78 178,62 186,78" fill="#e0e6e1"/>
+            <!-- Chapel Body -->
+            <rect x="30" y="95" width="150" height="145" fill="#ffffff" stroke="#d5ddd7" stroke-width="2"/>
+            <!-- Arched Teak Door -->
+            <path d="M82 240 L82 165 A23 23 0 0 1 128 165 L128 240 Z" fill="#7c4722" stroke="#4e2b12" stroke-width="3"/>
+            <rect x="20" y="138" width="170" height="6" fill="#5d4037"/>
+          </g>
+          <!-- Laterite Compound Wall -->
+          <rect x="85" y="282" width="470" height="46" fill="#7a3e2e" stroke="#4f251a" stroke-width="2"/>
+          <!-- Winding Saligao Village Road -->
+          <path d="M0 365 Q240 315 640 345 L640 400 L0 400 Z" fill="#373c3f"/>
+          <path d="M0 365 Q240 315 640 345" fill="none" stroke="#e0e0e0" stroke-width="3"/>
+          <!-- Three Travellers Admiring the Chapel -->
+          <g transform="translate(150, 255)">
+            <circle cx="0" cy="0" r="11" fill="#8d5538"/>
+            <polygon points="-14,55 14,55 8,14 -8,14" fill="#eceff1"/>
+          </g>
+          <g transform="translate(225, 262)">
+            <circle cx="0" cy="0" r="10" fill="#a16649"/>
+            <rect x="-10" y="12" width="20" height="34" rx="4" fill="#29b6f6"/>
+            <rect x="-8" y="46" width="16" height="34" fill="#455a64"/>
+          </g>
+          <g transform="translate(305, 252)">
+            <circle cx="0" cy="0" r="11" fill="#75432a"/>
+            <rect x="-14" y="13" width="28" height="40" rx="5" fill="#fafafa"/>
+            <polygon points="-9,18 9,18 11,45 -11,45" fill="#1c1c1c"/>
+          </g>
+        </svg>
+      `,
+
+      /* SLIDE 3 - Card 2: Purple Goan Heritage House & Crimson Balcão */
+      saligao_balcao: `
+        <svg viewBox="0 0 640 400" class="w-full h-full object-cover" xmlns="http://www.w3.org/2000/svg">
+          <rect width="640" height="400" fill="#d9e6dc"/>
+          <!-- Vibrant Purple Indo-Portuguese House -->
+          <rect x="290" y="40" width="350" height="245" fill="#4a235a"/>
+          <!-- Warm Lit Goan Wooden Window -->
+          <rect x="485" y="135" width="90" height="105" fill="#ffb74d" stroke="#2c1409" stroke-width="6"/>
+          <line x1="530" y1="135" x2="530" y2="240" stroke="#2c1409" stroke-width="4"/>
+          <line x1="485" y1="187" x2="575" y2="187" stroke="#2c1409" stroke-width="4"/>
+          <!-- White Compound Wall -->
+          <rect x="0" y="215" width="315" height="65" fill="#f5f5f5" stroke="#cfd8dc" stroke-width="2"/>
+          <!-- Lush Banana Leaves & Coconut Fronds -->
+          <path d="M120 180 Q190 75 295 145 Q215 155 120 180 Z" fill="#4caf50"/>
+          <path d="M185 195 Q255 60 365 130 Q275 150 185 195 Z" fill="#388e3c"/>
+          <path d="M310 165 Q410 45 520 120 Q415 140 310 165 Z" fill="#2e7d32"/>
+          <!-- Iconic Goan Crimson Red-Oxide Balcão Bench -->
+          <polygon points="25,275 615,275 615,342 115,342 115,395 25,395" fill="#c0392b" stroke="#922b21" stroke-width="2"/>
+          <rect x="0" y="342" width="640" height="58" fill="#b0b8b4"/>
+          <!-- Three Laughing Travellers on the Balcão -->
+          <g transform="translate(215, 225)">
+            <circle cx="0" cy="0" r="13" fill="#9c6244"/>
+            <path d="M-14 16 L14 16 L24 68 L-18 68 Z" fill="#f8bbd0"/>
+          </g>
+          <g transform="translate(345, 215)">
+            <circle cx="0" cy="0" r="14" fill="#7d492d"/>
+            <rect x="-16" y="16" width="32" height="48" rx="6" fill="#ffffff"/>
+            <rect x="-14" y="64" width="28" height="24" fill="#263238"/>
+          </g>
+          <g transform="translate(445, 222)">
+            <circle cx="0" cy="0" r="13" fill="#a66c4e"/>
+            <rect x="-14" y="16" width="28" height="44" rx="5" fill="#29b6f6"/>
+            <rect x="-13" y="60" width="26" height="28" fill="#455a64"/>
+          </g>
+        </svg>
+      `,
+
+      /* SLIDE 4 - Card 1: Azulejo Tile Tabletop with Goan Christmas Sweets */
+      panjim_azulejo: `
+        <svg viewBox="0 0 640 400" class="w-full h-full object-cover" xmlns="http://www.w3.org/2000/svg">
+          <!-- Blue & White Goan Azulejo Tile Grid -->
+          <rect width="640" height="400" fill="#f4f7fb"/>
+          <g stroke="#1b4f9c" stroke-width="2" fill="none" opacity="0.82">
+            <rect x="10" y="10" width="200" height="185" fill="#e8f0fa"/>
+            <rect x="220" y="10" width="200" height="185" fill="#e8f0fa"/>
+            <rect x="430" y="10" width="200" height="185" fill="#e8f0fa"/>
+            <rect x="10" y="205" width="200" height="185" fill="#e8f0fa"/>
+            <rect x="220" y="205" width="200" height="185" fill="#e8f0fa"/>
+            <rect x="430" y="205" width="200" height="185" fill="#e8f0fa"/>
+            <circle cx="110" cy="102" r="55" stroke-dasharray="6 4"/>
+            <circle cx="530" cy="102" r="55" stroke-dasharray="6 4"/>
+            <circle cx="530" cy="297" r="55" stroke-dasharray="6 4"/>
+          </g>
+          <text x="530" y="190" text-anchor="middle" fill="#1b4f9c" font-family="Cinzel,serif" font-size="11" font-weight="bold">GOA - PROCISSÃO</text>
+          <!-- Deep Forest-Green Ceramic Platter -->
+          <circle cx="290" cy="245" r="142" fill="#1b3b2b" stroke="#0e2218" stroke-width="6"/>
+          <circle cx="290" cy="245" r="126" fill="#234a36"/>
+          <!-- Golden Bolinhas (Coconut Semolina Cakes) -->
+          <circle cx="235" cy="175" r="26" fill="#e6a23c" stroke="#c47d1c" stroke-width="2"/>
+          <circle cx="295" cy="182" r="24" fill="#dea03c" stroke="#c47d1c" stroke-width="2"/>
+          <!-- Crispy Kulkuls -->
+          <ellipse cx="215" cy="222" rx="28" ry="11" transform="rotate(-18 215 222)" fill="#f3cf7a" stroke="#c99b38" stroke-width="2"/>
+          <ellipse cx="322" cy="235" rx="28" ry="11" transform="rotate(14 322 235)" fill="#f3cf7a" stroke="#c99b38" stroke-width="2"/>
+          <ellipse cx="362" cy="272" rx="11" ry="26" transform="rotate(-12 362 272)" fill="#f3cf7a" stroke="#c99b38" stroke-width="2"/>
+          <!-- Ruby Guava Cheese (Perad) & Jujubes -->
+          <polygon points="375,180 415,195 398,232 360,215" fill="#c62828" stroke="#ff8a80" stroke-width="1.5"/>
+          <rect x="215" y="242" width="26" height="24" rx="4" fill="#e57373" stroke="#ffcdd2"/>
+          <rect x="262" y="232" width="26" height="24" rx="4" fill="#ffb74d" stroke="#ffe0b2"/>
+          <!-- Rich Dark Dodol Slice -->
+          <polygon points="245,275 342,272 356,315 242,318" fill="#2b1710" stroke="#4e2c20" stroke-width="2"/>
+          <rect x="192" y="302" width="44" height="32" rx="5" fill="#7b381e" stroke="#a65232" stroke-width="1.5"/>
+          <!-- Pistachio Peda -->
+          <circle cx="395" cy="268" r="18" fill="#c5e1a5" stroke="#9ccc65" stroke-width="2"/>
+        </svg>
+      `,
+
+      /* SLIDE 4 - Card 2: Cozy Panjim Bar with Santa Hat & Christmas Punch */
+      panjim_punch_sip: `
+        <svg viewBox="0 0 640 400" class="w-full h-full object-cover" xmlns="http://www.w3.org/2000/svg">
+          <rect width="640" height="400" fill="#3b2114"/>
+          <!-- Warm Teak Wood Panjim Tavern Wall -->
+          <rect x="0" y="0" width="430" height="400" fill="#59331d"/>
+          <line x1="140" y1="0" x2="140" y2="400" stroke="#3d2111" stroke-width="3"/>
+          <line x1="285" y1="0" x2="285" y2="400" stroke="#3d2111" stroke-width="3"/>
+          <!-- Apothecary Spice & Feni Jars on Back Bar -->
+          <g transform="translate(465, 195)">
+            <rect x="0" y="20" width="36" height="55" rx="6" fill="rgba(255,255,255,0.22)" stroke="#cfd8dc"/>
+            <rect x="4" y="42" width="28" height="30" fill="#3e2723"/>
+            <rect x="46" y="15" width="38" height="60" rx="6" fill="rgba(255,255,255,0.22)" stroke="#cfd8dc"/>
+            <rect x="50" y="38" width="30" height="34" fill="#5d4037"/>
+            <rect x="94" y="22" width="36" height="53" rx="6" fill="rgba(255,255,255,0.22)" stroke="#cfd8dc"/>
+            <rect x="98" y="45" width="28" height="27" fill="#8d6e63"/>
+          </g>
+          <!-- Glowing Warm Bar Counter -->
+          <rect x="425" y="275" width="215" height="125" fill="#29150b"/>
+          <rect x="435" y="295" width="195" height="12" rx="4" fill="#ffb300" opacity="0.75"/>
+          <!-- Guest in Denim Overalls & Santa Hat Sipping Christmas Punch -->
+          <g transform="translate(305, 145)">
+            <!-- Body -->
+            <path d="M-75 255 L-55 110 L55 110 L75 255 Z" fill="#ebd2c5"/>
+            <rect x="-42" y="125" width="84" height="130" rx="10" fill="#3b5978"/>
+            <circle cx="32" cy="165" r="14" fill="#ffffff" stroke="#e6b84c" stroke-width="2"/>
+            <!-- Head & Hair -->
+            <circle cx="0" cy="48" r="38" fill="#1a1210"/>
+            <circle cx="0" cy="54" r="31" fill="#e5b396"/>
+            <!-- Festive Santa Hat -->
+            <path d="M-32 34 Q-5 -42 36 22 Z" fill="#c62828"/>
+            <rect x="-35" y="26" width="70" height="13" rx="6" fill="#ffffff"/>
+            <circle cx="38" cy="24" r="9" fill="#ffffff"/>
+            <!-- Crystal Glass of Spiced Christmas Punch -->
+            <polygon points="-24,78 16,78 11,122 -19,122" fill="rgba(255,255,255,0.3)" stroke="#eceff1" stroke-width="2"/>
+            <polygon points="-21,92 13,92 10,120 -18,120" fill="#4a151b"/>
+          </g>
+        </svg>
+      `,
+
+      /* SLIDE 5 - Card 1: Brass Tray with Hot Chocolate & Goan Sweets */
+      margao_hotchoc: `
+        <svg viewBox="0 0 640 400" class="w-full h-full object-cover" xmlns="http://www.w3.org/2000/svg">
+          <rect width="640" height="400" fill="#4a2816"/>
+          <!-- Tartan Festive Napkin Corner -->
+          <polygon points="430,230 640,180 640,400 370,400" fill="#9e1b24"/>
+          <line x1="410" y1="240" x2="640" y2="350" stroke="#1b4d3e" stroke-width="14" opacity="0.6"/>
+          <!-- Glowing Mini Lantern House -->
+          <polygon points="115,95 165,52 215,95 215,175 115,175" fill="#f5efe6"/>
+          <rect x="132" y="110" width="22" height="26" fill="#ffca28"/>
+          <rect x="172" y="110" width="22" height="26" fill="#ffca28"/>
+          <!-- Round Brass Platter -->
+          <ellipse cx="305" cy="268" rx="225" ry="118" fill="#b88a32" stroke="#e6b84c" stroke-width="5"/>
+          <ellipse cx="305" cy="264" rx="205" ry="102" fill="#9c7224"/>
+          <!-- Blue Floral Mug of Steaming Hot Chocolate -->
+          <g transform="translate(385, 165)">
+            <path d="M85 35 C115 35, 115 95, 85 95" fill="none" stroke="#f5f5f5" stroke-width="10"/>
+            <rect x="0" y="15" width="90" height="105" rx="14" fill="#f5f5f5" stroke="#cfd8dc" stroke-width="2"/>
+            <ellipse cx="45" cy="18" rx="42" ry="14" fill="#5d331d"/>
+            <circle cx="28" cy="65" r="11" fill="#1e4d8c" opacity="0.75"/>
+            <circle cx="62" cy="82" r="10" fill="#1e4d8c" opacity="0.75"/>
+          </g>
+          <!-- Jam Tarts & Coconut Rum Balls -->
+          <circle cx="295" cy="195" r="28" fill="#e6b15c" stroke="#c78d32" stroke-width="3"/>
+          <circle cx="295" cy="195" r="15" fill="#b71c1c"/>
+          <circle cx="405" cy="295" r="30" fill="#e6b15c" stroke="#c78d32" stroke-width="3"/>
+          <circle cx="405" cy="295" r="16" fill="#b71c1c"/>
+          <!-- Coconut-Dusted Rum Balls -->
+          <circle cx="195" cy="295" r="24" fill="#3e1f14" stroke="#ffffff" stroke-width="2" stroke-dasharray="3 3"/>
+          <circle cx="255" cy="312" r="25" fill="#3e1f14" stroke="#ffffff" stroke-width="2" stroke-dasharray="3 3"/>
+          <circle cx="318" cy="318" r="25" fill="#3e1f14" stroke="#ffffff" stroke-width="2" stroke-dasharray="3 3"/>
+          <!-- Neureos -->
+          <ellipse cx="332" cy="265" rx="34" ry="20" fill="#f3d69b" stroke="#d4aa5d" stroke-width="2"/>
+        </svg>
+      `,
+
+      /* SLIDE 5 - Card 2: Ruby Cranberry & Orange Christmas Punch Bowl */
+      margao_punch_bowl: `
+        <svg viewBox="0 0 640 400" class="w-full h-full object-cover" xmlns="http://www.w3.org/2000/svg">
+          <rect width="640" height="400" fill="#1c110b"/>
+          <!-- Warm Fairy Lights & Evergreen Garland -->
+          <circle cx="120" cy="70" r="12" fill="#ffe082" opacity="0.8"/>
+          <circle cx="170" cy="85" r="10" fill="#ffd54f" opacity="0.7"/>
+          <circle cx="220" cy="68" r="13" fill="#ffe082" opacity="0.85"/>
+          <circle cx="520" cy="75" r="12" fill="#ffd54f" opacity="0.75"/>
+          <!-- Side Punch Glasses -->
+          <rect x="85" y="190" width="52" height="75" rx="6" fill="rgba(255,255,255,0.22)" stroke="#eceff1" stroke-width="2"/>
+          <rect x="89" y="212" width="44" height="49" fill="#b71c1c"/>
+          <circle cx="110" cy="216" r="12" fill="#ffa726"/>
+          <!-- Crystal Punch Bowl -->
+          <g transform="translate(355, 210)">
+            <ellipse cx="0" cy="128" rx="75" ry="18" fill="rgba(255,255,255,0.35)" stroke="#eceff1" stroke-width="2"/>
+            <path d="M-145 -35 C-145 95, 145 95, 145 -35 Z" fill="rgba(255,255,255,0.25)" stroke="#ffffff" stroke-width="3"/>
+            <path d="M-136 -15 C-136 84, 136 84, 136 -15 Z" fill="#9e111e"/>
+            <ellipse cx="0" cy="-15" rx="136" ry="34" fill="#d32f2f" stroke="#ff8a80" stroke-width="2"/>
+            <!-- Floating Orange Slices, Cranberries & Mint -->
+            <circle cx="-45" cy="-14" r="22" fill="#ffa726" stroke="#fff3e0" stroke-width="2"/>
+            <circle cx="52" cy="-10" r="22" fill="#fb8c00" stroke="#fff3e0" stroke-width="2"/>
+            <circle cx="5" cy="4" r="20" fill="#ffa726" stroke="#fff3e0" stroke-width="2"/>
+            <circle cx="-12" cy="-24" r="7" fill="#6a0912"/>
+            <circle cx="24" cy="-22" r="7" fill="#6a0912"/>
+            <circle cx="-78" cy="-8" r="7" fill="#6a0912"/>
+            <ellipse cx="10" cy="-18" rx="14" ry="7" fill="#2e7d32"/>
+            <!-- Silver Ladle -->
+            <line x1="78" y1="-22" x2="148" y2="-135" stroke="#eceff1" stroke-width="6" stroke-linecap="round"/>
+          </g>
+          <!-- Red Ornament on Table -->
+          <circle cx="155" cy="332" r="26" fill="#b71c1c" stroke="#e6b84c" stroke-width="2"/>
+        </svg>
+      `,
+
+      /* SLIDE 5 - Card 3: Rich Goan Plum Cake with Cashews & Candlelight */
+      margao_plum_cake: `
+        <svg viewBox="0 0 640 400" class="w-full h-full object-cover" xmlns="http://www.w3.org/2000/svg">
+          <rect width="640" height="400" fill="#17100b"/>
+          <!-- Glowing Candle Behind Cake -->
+          <circle cx="435" cy="110" r="55" fill="rgba(255,213,79,0.28)"/>
+          <rect x="422" y="125" width="26" height="58" rx="4" fill="#fff8e1"/>
+          <path d="M435 92 Q443 110 435 122 Q427 110 435 92 Z" fill="#ffca28"/>
+          <!-- Wooden Cake Board -->
+          <ellipse cx="320" cy="312" rx="220" ry="62" fill="#5c361e" stroke="#7d4b2b" stroke-width="3"/>
+          <!-- Rich Dark Christmas Fruit & Rum Cake -->
+          <g transform="translate(275, 210)">
+            <ellipse cx="0" cy="75" rx="118" ry="38" fill="#2e160b"/>
+            <rect x="-118" y="0" width="236" height="75" fill="#3b1d0e"/>
+            <ellipse cx="0" cy="0" rx="118" ry="38" fill="#4f2814" stroke="#6e3a1f" stroke-width="2"/>
+            <!-- Cashew Nuts & Glazed Cherries on Top -->
+            <ellipse cx="-55" cy="-4" rx="12" ry="6" transform="rotate(-25 -55 -4)" fill="#f5deb3"/>
+            <ellipse cx="48" cy="-8" rx="12" ry="6" transform="rotate(20 48 -8)" fill="#f5deb3"/>
+            <ellipse cx="-18" cy="14" rx="12" ry="6" transform="rotate(15 -18 14)" fill="#f5deb3"/>
+            <circle cx="15" cy="-12" r="8" fill="#c62828"/>
+            <circle cx="-35" cy="8" r="7" fill="#2e7d32"/>
+            <circle cx="68" cy="6" r="8" fill="#c62828"/>
+            <!-- Rosemary Sprig -->
+            <line x1="-15" y1="-25" x2="22" y2="-16" stroke="#4caf50" stroke-width="4" stroke-linecap="round"/>
+          </g>
+          <!-- Sliced Wedge in Foreground -->
+          <g transform="translate(365, 255)">
+            <polygon points="0,15 95,0 112,55 18,72" fill="#36190c" stroke="#592c17" stroke-width="2"/>
+            <circle cx="42" cy="38" r="5" fill="#e6a23c"/>
+            <circle cx="74" cy="30" r="5" fill="#c62828"/>
+            <ellipse cx="58" cy="52" rx="8" ry="4" fill="#f5deb3"/>
+          </g>
+        </svg>
+      `,
+
+      /* SLIDE 5 - Card 4: Christmas Cookie Decorating (Gingerbread, Trees, Stars) */
+      margao_cookies: `
+        <svg viewBox="0 0 640 400" class="w-full h-full object-cover" xmlns="http://www.w3.org/2000/svg">
+          <rect width="640" height="400" fill="#4e2b18"/>
+          <!-- Bowls of Sprinkles & Icing -->
+          <ellipse cx="145" cy="95" rx="45" ry="26" fill="#eceff1"/>
+          <ellipse cx="145" cy="92" rx="38" ry="20" fill="#c62828"/>
+          <ellipse cx="435" cy="90" rx="52" ry="28" fill="#f5f5f5"/>
+          <ellipse cx="435" cy="88" rx="42" ry="21" fill="#2e7d32"/>
+          <!-- Gingerbread Man Cookie -->
+          <g transform="translate(135, 225)">
+            <circle cx="0" cy="-32" r="18" fill="#b86b2b"/>
+            <rect x="-32" y="-12" width="64" height="16" rx="8" fill="#b86b2b"/>
+            <rect x="-16" y="-12" width="32" height="42" rx="8" fill="#b86b2b"/>
+            <rect x="-16" y="24" width="13" height="28" rx="6" fill="#b86b2b"/>
+            <rect x="3" y="24" width="13" height="28" rx="6" fill="#b86b2b"/>
+            <circle cx="-6" cy="-35" r="2.5" fill="#ffffff"/>
+            <circle cx="6" cy="-35" r="2.5" fill="#ffffff"/>
+            <circle cx="0" cy="4" r="3" fill="#c62828"/>
+            <circle cx="0" cy="16" r="3" fill="#2e7d32"/>
+          </g>
+          <!-- Candy Cane Cookie -->
+          <path d="M235 235 L235 175 A20 20 0 0 1 275 175 L275 188" fill="none" stroke="#c88342" stroke-width="18" stroke-linecap="round"/>
+          <path d="M235 235 L235 175 A20 20 0 0 1 275 175 L275 188" fill="none" stroke="#ffffff" stroke-width="12" stroke-dasharray="10 10" stroke-linecap="round"/>
+          <!-- Snowman Cookie -->
+          <g transform="translate(335, 225)">
+            <circle cx="0" cy="-22" r="16" fill="#ffffff"/>
+            <circle cx="0" cy="14" r="24" fill="#ffffff"/>
+            <rect x="-12" y="-44" width="24" height="12" fill="#212121"/>
+            <line x1="-14" y1="-5" x2="14" y2="-5" stroke="#c62828" stroke-width="5"/>
+          </g>
+          <!-- Christmas Tree Cookies with Green & Red Icing -->
+          <g transform="translate(255, 315)">
+            <polygon points="0,-42 -36,18 36,18" fill="#c88342"/>
+            <polygon points="0,-34 -28,13 28,13" fill="#43a047"/>
+            <circle cx="-6" cy="-6" r="3" fill="#ffeb3b"/>
+            <circle cx="8" cy="4" r="3" fill="#e53935"/>
+          </g>
+          <g transform="translate(425, 275)">
+            <polygon points="0,-46 -40,20 40,20" fill="#c88342"/>
+            <polygon points="0,-36 -30,14 30,14" fill="#2e7d32"/>
+            <circle cx="0" cy="-14" r="3.5" fill="#ff5252"/>
+            <circle cx="-10" cy="4" r="3.5" fill="#ffd740"/>
+          </g>
+          <!-- Piping Bag -->
+          <polygon points="480,245 595,165 620,215" fill="rgba(255,255,255,0.65)" stroke="#cfd8dc"/>
+          <polygon points="480,245 535,205 548,228" fill="#d32f2f"/>
+        </svg>
+      `,
+
+      /* SLIDE 6 - Card 1: Panjim Cobalt-Blue & Ochre Indo-Portuguese Evening Socials */
+      socials_panjim_dusk: `
+        <svg viewBox="0 0 640 400" class="w-full h-full object-cover" xmlns="http://www.w3.org/2000/svg">
+          <rect width="640" height="400" fill="#141829"/>
+          <!-- Cobalt-Blue & Ochre Indo-Portuguese Facade -->
+          <rect x="65" y="45" width="320" height="310" fill="#1e4b8f"/>
+          <rect x="385" y="45" width="215" height="310" fill="#f2eadc"/>
+          <!-- Arched Wooden Heritage Door -->
+          <path d="M180 355 L180 185 A48 48 0 0 1 276 185 L276 355 Z" fill="#593219" stroke="#e6b84c" stroke-width="3"/>
+          <!-- Glowing Overhead Fairy Lights -->
+          <path d="M0 35 Q160 72 320 38 T640 42" fill="none" stroke="#e6b84c" stroke-width="2"/>
+          <circle cx="80" cy="48" r="6" fill="#ffe082"/>
+          <circle cx="160" cy="54" r="7" fill="#ffd54f"/>
+          <circle cx="240" cy="46" r="6" fill="#ffe082"/>
+          <circle cx="320" cy="38" r="7" fill="#ffd54f"/>
+          <circle cx="420" cy="48" r="6" fill="#ffe082"/>
+          <circle cx="510" cy="52" r="7" fill="#ffd54f"/>
+          <!-- Joyful Group Celebrating with Raised Hands -->
+          <g fill="#263238" stroke="#e6b84c" stroke-width="1">
+            <circle cx="125" cy="225" r="16" fill="#8d5538"/>
+            <rect x="108" y="244" width="34" height="95" rx="8" fill="#d84315"/>
+            <circle cx="185" cy="218" r="16" fill="#6d4029"/>
+            <rect x="166" y="236" width="38" height="105" rx="8" fill="#283593"/>
+            <circle cx="245" cy="228" r="16" fill="#5c3522"/>
+            <rect x="228" y="246" width="34" height="95" rx="8" fill="#2e7d32"/>
+            <circle cx="305" cy="222" r="16" fill="#9c6244"/>
+            <rect x="288" y="240" width="34" height="100" rx="8" fill="#c5e1a5"/>
+            <circle cx="368" cy="220" r="16" fill="#8d5538"/>
+            <rect x="350" y="238" width="36" height="102" rx="8" fill="#ad1457"/>
+            <circle cx="430" cy="224" r="16" fill="#a16649"/>
+            <rect x="412" y="242" width="36" height="98" rx="8" fill="#f8bbd0"/>
+          </g>
+          <!-- Raised Celebratory Arms -->
+          <line x1="185" y1="245" x2="128" y2="165" stroke="#6d4029" stroke-width="8" stroke-linecap="round"/>
+          <line x1="255" y1="245" x2="310" y2="165" stroke="#5c3522" stroke-width="8" stroke-linecap="round"/>
+          <line x1="418" y1="245" x2="375" y2="162" stroke="#a16649" stroke-width="8" stroke-linecap="round"/>
+        </svg>
+      `,
+
+      /* SLIDE 6 - Card 2: Friends Toasting Feni Cocktails & Homemade Wine */
+      socials_tavern_toast: `
+        <svg viewBox="0 0 640 400" class="w-full h-full object-cover" xmlns="http://www.w3.org/2000/svg">
+          <rect width="640" height="400" fill="#2e1a10"/>
+          <!-- Textured Brick & Wood Wall -->
+          <rect x="110" y="20" width="420" height="135" fill="#4e2e1e" stroke="#361e12" stroke-width="3"/>
+          <!-- Tufted Leather Booth -->
+          <rect x="35" y="155" width="570" height="150" rx="22" fill="#4a1c17" stroke="#2e0f0c" stroke-width="4"/>
+          <!-- Five Smiling Travellers in the Booth -->
+          <g transform="translate(115, 185)">
+            <circle cx="0" cy="0" r="22" fill="#c68863"/>
+            <rect x="-26" y="24" width="52" height="85" rx="12" fill="#fbc02d"/>
+          </g>
+          <g transform="translate(235, 188)">
+            <circle cx="0" cy="0" r="22" fill="#d49b76"/>
+            <rect x="-26" y="24" width="52" height="85" rx="12" fill="#fafafa"/>
+          </g>
+          <g transform="translate(365, 185)">
+            <circle cx="0" cy="0" r="22" fill="#8d5538"/>
+            <path d="M-20 -12 Q0 -26 20 -12 Z" fill="#1565c0"/>
+            <rect x="-26" y="24" width="52" height="85" rx="12" fill="#263238"/>
+          </g>
+          <g transform="translate(485, 115)">
+            <circle cx="0" cy="0" r="24" fill="#8d5538"/>
+            <rect x="-16" y="-6" width="13" height="9" rx="2" fill="none" stroke="#fff" stroke-width="2"/>
+            <rect x="3" y="-6" width="13" height="9" rx="2" fill="none" stroke="#fff" stroke-width="2"/>
+            <rect x="-32" y="26" width="64" height="115" rx="14" fill="#3e141c"/>
+          </g>
+          <!-- Warm Teak Table & Amber Feni / Wine Glasses -->
+          <polygon points="180,295 495,295 545,400 130,400" fill="#b87a3d" stroke="#7d4e20" stroke-width="3"/>
+          <rect x="205" y="265" width="22" height="28" rx="4" fill="#ff8f00" stroke="#fff" stroke-width="1.5"/>
+          <rect x="425" y="220" width="22" height="28" rx="4" fill="#ff8f00" stroke="#fff" stroke-width="1.5"/>
+          <rect x="465" y="170" width="22" height="28" rx="4" fill="#c62828" stroke="#fff" stroke-width="1.5"/>
+        </svg>
+      `,
+
+      /* SLIDE 7 - Card 1: Fontainhas Latin Quarter Balconies & Christmas Stars */
+      fontainhas_quarter: `
+        <svg viewBox="0 0 640 400" class="w-full h-full object-cover" xmlns="http://www.w3.org/2000/svg">
+          <defs>
+            <linearGradient id="fontainhasSky" x1="0%" y1="0%" x2="0%" y2="100%">
+              <stop offset="0%" stop-color="#0f233c"/>
+              <stop offset="100%" stop-color="#293d54"/>
+            </linearGradient>
+          </defs>
+          <rect width="640" height="400" fill="url(#fontainhasSky)"/>
+          <!-- Ochre & Terracotta Fontainhas Heritage Houses -->
+          <rect x="20" y="75" width="290" height="285" fill="#d99b26" stroke="#f5eedc" stroke-width="4"/>
+          <rect x="310" y="95" width="310" height="265" fill="#b83b2b" stroke="#f5eedc" stroke-width="4"/>
+          <!-- Mangalore Clay Roof Tiles -->
+          <polygon points="10,75 165,20 320,75" fill="#6e2819"/>
+          <polygon points="300,95 465,35 630,95" fill="#591f13"/>
+          <!-- Wrought-Iron Balcony & White Pilasters -->
+          <rect x="55" y="135" width="75" height="115" fill="#3b2110" stroke="#ffffff" stroke-width="5"/>
+          <rect x="185" y="135" width="75" height="115" fill="#ffb74d" stroke="#ffffff" stroke-width="5"/>
+          <rect x="355" y="150" width="85" height="115" fill="#ffb74d" stroke="#ffffff" stroke-width="5"/>
+          <rect x="490" y="150" width="85" height="115" fill="#3b2110" stroke="#ffffff" stroke-width="5"/>
+          <rect x="35" y="210" width="260" height="42" fill="none" stroke="#1a1a1a" stroke-width="3"/>
+          <!-- Glowing Goan 5-Point Christmas Star Lanterns -->
+          <g transform="translate(155, 92)">
+            <polygon points="0,-28 8,-8 28,-8 12,5 18,25 0,13 -18,25 -12,5 -28,-8 -8,-8" fill="#fff8dc" stroke="#e6b84c" stroke-width="2"/>
+          </g>
+          <g transform="translate(465, 108)">
+            <polygon points="0,-32 9,-9 32,-9 14,6 20,28 0,15 -20,28 -14,6 -32,-9 -9,-9" fill="#ffeb99" stroke="#c62828" stroke-width="2"/>
+          </g>
+          <!-- Cobblestone Latin Quarter Lane -->
+          <rect x="0" y="355" width="640" height="45" fill="#2c3036"/>
+        </svg>
+      `,
+
+      /* SLIDE 7 - Card 2: 150+ Year Old House Wine Tasting & Stolen Crib Quest */
+      fontainhas_quest: `
+        <svg viewBox="0 0 640 400" class="w-full h-full object-cover" xmlns="http://www.w3.org/2000/svg">
+          <rect width="640" height="400" fill="#170e0a"/>
+          <!-- Antique Rose-Wood Table -->
+          <rect x="0" y="255" width="640" height="145" fill="#3d1e12"/>
+          <!-- Vintage Glass Carafe of Homemade Goan Wine -->
+          <g transform="translate(175, 135)">
+            <rect x="-12" y="-35" width="24" height="42" fill="rgba(255,255,255,0.28)" stroke="#e6b84c" stroke-width="2"/>
+            <ellipse cx="0" cy="55" rx="46" ry="58" fill="rgba(255,255,255,0.2)" stroke="#e6b84c" stroke-width="2"/>
+            <path d="M-42 42 A44 52 0 0 0 42 42 Z" fill="#7b1120"/>
+          </g>
+          <!-- Two Wine Goblets -->
+          <g transform="translate(275, 205)">
+            <path d="M-18 -25 L18 -25 L12 8 L-12 8 Z" fill="#8e1626" stroke="#eceff1" stroke-width="1.5"/>
+            <line x1="0" y1="8" x2="0" y2="42" stroke="#eceff1" stroke-width="2.5"/>
+            <ellipse cx="0" cy="42" rx="14" ry="4" fill="#eceff1"/>
+          </g>
+          <!-- Treasure Quest Parchment Map & Stolen Crib Star Piece -->
+          <g transform="translate(435, 215) rotate(-5)">
+            <rect x="-105" y="-75" width="210" height="150" rx="8" fill="#f5e6c4" stroke="#b88a32" stroke-width="3"/>
+            <text x="0" y="-42" text-anchor="middle" fill="#6e2819" font-family="Cinzel,serif" font-size="13" font-weight="bold">FESTA DE NATAL</text>
+            <path d="M-70 -10 Q-20 -30 15 10 T75 -15" fill="none" stroke="#a61c26" stroke-width="2.5" stroke-dasharray="5 4"/>
+            <polygon points="0,-12 5,0 18,0 8,8 12,20 0,12 -12,20 -8,8 -18,0 -5,0" transform="translate(0, 22)" fill="#e6b84c" stroke="#7a5108" stroke-width="1.5"/>
+          </g>
+        </svg>
+      `,
+
+      /* SLIDE 8 - Card 1: Santa-Hatted Travellers at Dusk Water Crib Path */
+      crib_group_dusk: `
+        <svg viewBox="0 0 640 400" class="w-full h-full object-cover" xmlns="http://www.w3.org/2000/svg">
+          <defs>
+            <linearGradient id="duskPondSky" x1="0%" y1="0%" x2="0%" y2="100%">
+              <stop offset="0%" stop-color="#f2c49b"/>
+              <stop offset="55%" stop-color="#8c7a8a"/>
+              <stop offset="100%" stop-color="#1b2631"/>
+            </linearGradient>
+          </defs>
+          <rect width="640" height="400" fill="url(#duskPondSky)"/>
+          <!-- Pond Water with Illuminated Nativity Reflections -->
+          <ellipse cx="440" cy="245" rx="190" ry="95" fill="#2c3e50"/>
+          <circle cx="385" cy="215" r="14" fill="#69f0ae" opacity="0.85"/>
+          <circle cx="445" cy="225" r="16" fill="#ffd740" opacity="0.85"/>
+          <circle cx="515" cy="205" r="14" fill="#ff5252" opacity="0.85"/>
+          <!-- Green Festive Carpet Path -->
+          <polygon points="105,400 225,165 345,165 445,400" fill="#1b5e20" stroke="#a5d6a7" stroke-width="2"/>
+          <!-- Glowing White Star Light Pillars -->
+          <rect x="265" y="245" width="12" height="42" rx="4" fill="#ffffff"/>
+          <rect x="335" y="255" width="12" height="45" rx="4" fill="#ffffff"/>
+          <!-- Group of Santa-Hatted Travellers Smiling -->
+          <g>
+            <circle cx="155" cy="220" r="14" fill="#8d5538"/>
+            <polygon points="143,210 155,190 167,210" fill="#c62828"/>
+            <rect x="138" y="236" width="34" height="75" rx="8" fill="#880e4f"/>
+
+            <circle cx="215" cy="215" r="14" fill="#a16649"/>
+            <polygon points="203,205 215,185 227,205" fill="#c62828"/>
+            <rect x="198" y="231" width="34" height="75" rx="8" fill="#f8bbd0"/>
+
+            <circle cx="285" cy="235" r="14" fill="#7d492d"/>
+            <polygon points="273,225 285,205 297,225" fill="#c62828"/>
+            <rect x="268" y="251" width="34" height="75" rx="8" fill="#c62828"/>
+
+            <circle cx="355" cy="245" r="14" fill="#8d5538"/>
+            <polygon points="343,235 355,215 367,235" fill="#c62828"/>
+            <rect x="338" y="261" width="34" height="75" rx="8" fill="#1b5e20"/>
+          </g>
+        </svg>
+      `,
+
+      /* SLIDE 8 - Card 2: Palm-Lined Goan Courtyard with Giant Hanging Stars */
+      crib_star_avenue: `
+        <svg viewBox="0 0 640 400" class="w-full h-full object-cover" xmlns="http://www.w3.org/2000/svg">
+          <rect width="640" height="400" fill="#b8d0e0"/>
+          <!-- Coconut Palm Fronds Framing Top -->
+          <path d="M0 40 Q150 20 270 110 Q140 85 0 115 Z" fill="#2e5932"/>
+          <path d="M640 30 Q490 25 365 115 Q495 85 640 110 Z" fill="#234726"/>
+          <!-- White Goan Mansion Right -->
+          <rect x="465" y="95" width="175" height="215" fill="#f5f7f8" stroke="#cfd8dc" stroke-width="3"/>
+          <polygon points="455,95 555,40 640,95" fill="#7a3222"/>
+          <!-- Cobblestone Courtyard -->
+          <polygon points="0,400 265,245 385,245 640,400" fill="#787d82"/>
+          <!-- Giant Hanging White & Gold Goan Christmas Stars -->
+          <g transform="translate(155, 130)">
+            <polygon points="0,-38 11,-11 38,-11 16,6 24,33 0,17 -24,33 -16,6 -38,-11 -11,-11" fill="#d4af37" stroke="#fff8dc" stroke-width="2"/>
+          </g>
+          <g transform="translate(235, 165) scale(0.8)">
+            <polygon points="0,-38 11,-11 38,-11 16,6 24,33 0,17 -24,33 -16,6 -38,-11 -11,-11" fill="#ffffff" stroke="#cfd8dc" stroke-width="2"/>
+          </g>
+          <g transform="translate(455, 145) scale(0.85)">
+            <polygon points="0,-38 11,-11 38,-11 16,6 24,33 0,17 -24,33 -16,6 -38,-11 -11,-11" fill="#e6b84c" stroke="#ffffff" stroke-width="2"/>
+          </g>
+          <!-- Travellers Gathering in Courtyard -->
+          <circle cx="135" cy="255" r="12" fill="#263238"/>
+          <rect x="120" y="269" width="30" height="65" rx="6" fill="#212121"/>
+          <circle cx="495" cy="245" r="12" fill="#8d5538"/>
+          <rect x="480" y="259" width="30" height="65" rx="6" fill="#c62828"/>
+        </svg>
+      `,
+
+      /* SLIDE 8 - Card 3: Panoramic Floating Water Crib on Pond at Twilight */
+      crib_water_panorama: `
+        <svg viewBox="0 0 640 400" class="w-full h-full object-cover" xmlns="http://www.w3.org/2000/svg">
+          <defs>
+            <linearGradient id="twilightSky" x1="0%" y1="0%" x2="0%" y2="100%">
+              <stop offset="0%" stop-color="#f3c69f"/>
+              <stop offset="50%" stop-color="#8b8599"/>
+              <stop offset="100%" stop-color="#3b362e"/>
+            </linearGradient>
+          </defs>
+          <rect width="640" height="400" fill="url(#twilightSky)"/>
+          <!-- Pond Water -->
+          <ellipse cx="340" cy="275" rx="285" ry="95" fill="#4f483d"/>
+          <!-- Illuminated Floating Water Crib Installations -->
+          <!-- Yellow Castle Left -->
+          <g transform="translate(95, 195)">
+            <rect x="-25" y="-25" width="50" height="45" fill="#ffd54f" stroke="#fff9c4" stroke-width="2"/>
+            <polygon points="-30,-25 0,-52 30,-25" fill="#e53935"/>
+            <ellipse cx="0" cy="35" rx="22" ry="12" fill="#ffd54f" opacity="0.35"/>
+          </g>
+          <!-- Neon Green & Cyan Center Fountain Nativity -->
+          <g transform="translate(275, 215)">
+            <path d="M-30 15 Q0 -45 30 15 Z" fill="#00e676" stroke="#b9f6ca" stroke-width="2"/>
+            <ellipse cx="0" cy="22" rx="45" ry="12" fill="#1e88e5"/>
+            <ellipse cx="0" cy="45" rx="35" ry="16" fill="#00e676" opacity="0.3"/>
+          </g>
+          <!-- Glowing White & Magenta Nativity Pavilion Right -->
+          <g transform="translate(495, 200)">
+            <polygon points="-32,12 0,-32 32,12" fill="none" stroke="#ffffff" stroke-width="4"/>
+            <circle cx="0" cy="-2" r="10" fill="#ff4081"/>
+            <ellipse cx="0" cy="34" rx="28" ry="12" fill="#ffffff" opacity="0.35"/>
+          </g>
+          <!-- White Ducks Swimming in Foreground -->
+          <ellipse cx="265" cy="295" rx="9" ry="5" fill="#ffffff"/>
+          <ellipse cx="325" cy="285" rx="9" ry="5" fill="#ffffff"/>
+          <ellipse cx="395" cy="305" rx="9" ry="5" fill="#ffffff"/>
+        </svg>
+      `,
+
+      /* SLIDE 8 - Card 4: Thatched-Roof Nativity Manger Scene */
+      crib_nativity_manger: `
+        <svg viewBox="0 0 640 400" class="w-full h-full object-cover" xmlns="http://www.w3.org/2000/svg">
+          <rect width="640" height="400" fill="#170f0a"/>
+          <!-- Rustic Wooden Stable & Thatched Roof -->
+          <polygon points="45,115 320,22 595,115" fill="#6d4c2f" stroke="#a17a4d" stroke-width="3"/>
+          <rect x="95" y="115" width="450" height="255" fill="#2c190e"/>
+          <!-- Hanging Vintage Lantern -->
+          <circle cx="115" cy="155" r="32" fill="rgba(255,213,79,0.25)"/>
+          <rect x="106" y="142" width="18" height="24" rx="4" fill="#ffca28" stroke="#4e2a14" stroke-width="2"/>
+          <!-- Virgin Mary in Emerald & Crimson Robes -->
+          <g transform="translate(215, 225)">
+            <path d="M-42 125 L-25 -25 Q0 -45 25 -25 L42 125 Z" fill="#00897b" stroke="#80cbc4" stroke-width="2"/>
+            <circle cx="0" cy="-24" r="16" fill="#e5b396"/>
+            <path d="M-18 -20 Q0 -48 18 -20 L24 35 L-24 35 Z" fill="#c62828" opacity="0.75"/>
+          </g>
+          <!-- Saint Joseph in Crimson Cloak -->
+          <g transform="translate(425, 205)">
+            <path d="M-46 145 L-28 -35 Q0 -55 28 -35 L46 145 Z" fill="#8e1b24" stroke="#ef9a9a" stroke-width="2"/>
+            <circle cx="0" cy="-36" r="17" fill="#d49b76"/>
+            <line x1="-42" y1="-25" x2="-48" y2="145" stroke="#8d5538" stroke-width="6"/>
+          </g>
+          <!-- Baby Jesus in Glowing Golden Manger -->
+          <g transform="translate(320, 295)">
+            <ellipse cx="0" cy="10" rx="52" ry="26" fill="rgba(255,238,153,0.35)"/>
+            <polygon points="-36,15 36,15 24,45 -24,45" fill="#8d5538"/>
+            <ellipse cx="0" cy="10" rx="28" ry="12" fill="#fff9c4"/>
+            <circle cx="-12" cy="8" r="8" fill="#f5cba7"/>
+          </g>
+          <!-- White Lambs -->
+          <ellipse cx="185" cy="345" rx="34" ry="22" fill="#eceff1"/>
+          <circle cx="215" cy="332" r="11" fill="#cfd8dc"/>
+          <ellipse cx="455" cy="345" rx="34" ry="22" fill="#e1f5fe"/>
+          <circle cx="425" cy="332" r="11" fill="#b3e5fc"/>
+        </svg>
+      `
+    };
+
+    const PHOTO_ARTWORK = {
+      kuswar_platter: '<img src="Assets%20/01_Rudolphs_Bakehouse_Factory/photo_01.jpg" alt="Goan Kuswar platter" class="w-full h-full object-cover" />',
+      bakehouse_hosts: '<img src="Assets%20/01_Rudolphs_Bakehouse_Factory/photo_02.jpg" alt="Bakehouse hosts" class="w-full h-full object-cover" />',
+      saligao_chapel: '<img src="Assets%20/02_The_Saligao_Passo/photo_01.jpg" alt="Saligao chapel" class="w-full h-full object-cover" />',
+      saligao_balcao: '<img src="Assets%20/02_The_Saligao_Passo/photo_02.jpg" alt="Saligao balcão" class="w-full h-full object-cover" />',
+      panjim_azulejo: '<img src="Assets%20/03_Santas_Secret_Food_Trail_Panjim/photo_01.jpg" alt="Panjim food trail plating" class="w-full h-full object-cover" />',
+      panjim_punch_sip: '<img src="Assets%20/03_Santas_Secret_Food_Trail_Panjim/photo_02.jpg" alt="Panjim festive punch scene" class="w-full h-full object-cover" />',
+      margao_hotchoc: '<img src="Assets%20/04_Frostys_Christmas_Crawl_Margao/photo_01.png" alt="Margao hot chocolate spread" class="w-full h-full object-cover" />',
+      margao_punch_bowl: '<img src="Assets%20/04_Frostys_Christmas_Crawl_Margao/photo_02.png" alt="Frosty punch bowl" class="w-full h-full object-cover" />',
+      margao_plum_cake: '<img src="Assets%20/04_Frostys_Christmas_Crawl_Margao/photo_03.png" alt="Goan plum cake" class="w-full h-full object-cover" />',
+      margao_cookies: '<img src="Assets%20/04_Frostys_Christmas_Crawl_Margao/photo_04.png" alt="Decorated festive cookies" class="w-full h-full object-cover" />',
+      socials_panjim_dusk: '<img src="Assets%20/05_Wanted_Christmas_Socials/photo_01.jpg" alt="Christmas social gathering in Panjim" class="w-full h-full object-cover" />',
+      socials_tavern_toast: '<img src="Assets%20/05_Wanted_Christmas_Socials/photo_02.jpg" alt="Tavern toast scene" class="w-full h-full object-cover" />',
+      fontainhas_quarter: '<img src="Assets%20/06_Festa_De_Natal/photo_01.jpg" alt="Fontainhas heritage houses" class="w-full h-full object-cover" />',
+      fontainhas_quest: '<img src="Assets%20/06_Festa_De_Natal/photo_02.jpg" alt="Heritage house wine tasting and crib quest" class="w-full h-full object-cover" />',
+      crib_group_dusk: '<img src="Assets%20/07_Crib_Hopping/photo_01.jpg" alt="Crib hopping group at dusk" class="w-full h-full object-cover" />',
+      crib_star_avenue: '<img src="Assets%20/07_Crib_Hopping/photo_02.jpg" alt="Crib star avenue" class="w-full h-full object-cover" />',
+      crib_water_panorama: '<img src="Assets%20/07_Crib_Hopping/photo_03.jpg" alt="Water crib panorama" class="w-full h-full object-cover" />',
+      crib_nativity_manger: '<img src="Assets%20/07_Crib_Hopping/photo_04.jpg" alt="Nativity manger scene" class="w-full h-full object-cover" />'
+    };
+
+    /**
+     * ============================================================================
+     * 2. COMPLETE SLIDE CONTENT DATA (ALL 9 SLIDES FROM THE PDF)
+     * ============================================================================
+     */
+    const SLIDES_DATA = [
+      {
+        id: 'slide-1',
+        type: 'cover',
+        navTitle: 'Cover • Soul Travelling',
+        badge: 'Goa Festive Edition • December',
+        title: 'CHRISTMAS SPECIAL EXPERIENCES BY SOUL TRAVELLING',
+        subtitle: '7 Curated Goan Festive Trails • Heritage, Culinary Magic, Crib Hopping & Christmas Cheer'
+      },
+      {
+        id: 'slide-2',
+        type: 'experience',
+        navTitle: "01 • Rudolph's Bakehouse",
+        badge: 'Experience 01 • Traditional Goan Baking',
+        title: "RUDOLPH'S BAKEHOUSE FACTORY",
+        description: 'Celebrate Christmas the Goan way! Experience traditional cake mixing and baking, make delicious Kulkuls, enjoy festive cake tasting and local drinks, and immerse yourself in the warmth of Goan traditions, stories and festive vibes.',
+        itinerary: [
+          "Welcome and Intro at Local's House",
+          'Cake mixing & baking',
+          'Return to the house for snacks',
+          'Crib decoration along with Christmas Tree Decoration',
+          'Cake tasting with Snacks'
+        ],
+        meta: {
+          time: '3:30 PM',
+          duration: '3 Hrs.',
+          location: 'Sunanda cafe, Fatorda',
+          price: 'Rs 1799 + 18% GST',
+          dates: '13th & 21st Dec',
+          contact: '+91 9529490245'
+        },
+        visuals: [
+          { key: 'kuswar_platter', caption: 'Goan Kuswar Platter: Bebinca, Rose Cookies, Kulkuls & Diya' },
+          { key: 'bakehouse_hosts', caption: 'Festive Cake Mixing with Soul Travelling Hosts' }
+        ]
+      },
+      {
+        id: 'slide-3',
+        type: 'experience',
+        navTitle: '02 • The Saligao Passoi',
+        badge: 'Experience 02 • Heritage Village Walk',
+        title: 'THE SALIGAO PASSOI',
+        description: 'Discover the charm of a Goan Christmas with a festive village walk through Saligao. Visit its first Neo-Gothic church, stroll along the picturesque Coconut Lane, admire beautiful Goan homes from different eras, and soak in the festive spirit at a local village flea market. A lovely blend of heritage, architecture and Christmas cheer!',
+        itinerary: [
+          'Saligao Church',
+          'Baandh / Washermen village',
+          'Devchaar Tree/Stone',
+          'Walk through Goan Houses of various eras',
+          'Saligao Institute',
+          'Visiting a village flea market and enjoying the vibe of christmas'
+        ],
+        meta: {
+          time: '4:00 PM',
+          duration: '3 Hrs.',
+          location: 'Mae De Deus Church, Saligao',
+          price: 'Rs 799 + 18% GST',
+          dates: '15th & 22nd Dec',
+          contact: '+91 9529490245'
+        },
+        visuals: [
+          { key: 'saligao_chapel', caption: 'White-Washed Goan Chapel & Lush Coconut Lane' },
+          { key: 'saligao_balcao', caption: 'Heritage Goan Balcão & Indo-Portuguese Architecture' }
+        ]
+      },
+      {
+        id: 'slide-4',
+        type: 'experience',
+        navTitle: "03 • Santa's Food Trail",
+        badge: 'Experience 03 • Panjim Culinary & Punch Trail',
+        title: "SANTA'S SECRET FOOD TRAIL IN PANJIM",
+        description: 'Indulge in the flavours of a Goan Christmas with a festive food and drink experience! Savour traditional favourites like Goan rum cake, rum balls, chicken roast bread and the iconic chicken cafreal with poi. Get into the holiday spirit by crafting your own Christmas punch and unleashing your creativity with festive cookie decorating.',
+        itinerary: [
+          'Taste Goan Rum cake/Rum ball to sweeten your palette',
+          'Enjoy a Chicken Roast Bread the Goan Way',
+          "Try Goa's Iconic Chicken Cafreal with Poi",
+          "Indulge in Santa's naughty drinks by making a Christmas Punch",
+          'Show your skills by decorating cookies with a christmas feel'
+        ],
+        meta: {
+          time: '3:00 PM',
+          duration: '3 Hrs.',
+          location: 'Petisco, Panaji',
+          price: 'Rs 2250 + 18% GST',
+          dates: '16th, 18th & 23rd Dec',
+          contact: '+91 9529490245'
+        },
+        visuals: [
+          { key: 'panjim_azulejo', caption: 'Azulejo Tile Tabletop with Goan Bolinhas, Dodol & Perad' },
+          { key: 'panjim_punch_sip', caption: 'Spiced Christmas Punch & Festive Cheer in Panjim' }
+        ]
+      },
+      {
+        id: 'slide-5',
+        type: 'experience',
+        navTitle: "04 • Frosty's Crawl Margao",
+        badge: 'Experience 04 • South Goa Festive Food Crawl',
+        title: "FROSTY'S CHRISTMAS CRAWL IN MARGAO",
+        description: "Celebrate the magic of a Goan Christmas through a delightful festive food trail! Savour traditional Goan Christmas sweets paired with hot chocolate, join in on making Frosty's Christmas punch, and indulge in festive cakes at an iconic Goan location. Tuck into Santa's favourite bar bites and get creative with some Christmas-themed cookie decorating.",
+        itinerary: [
+          'Taste Goan christmas sweets along with hot chocolate to sweeten your palette',
+          "Enjoy Frosty's Christmas punch where everyone joins in",
+          'Enjoy christmas cakes at an iconic location',
+          "Taste Santa's Favourite Bar bites",
+          'Show your skills by decorating cookies with a christmas feel'
+        ],
+        meta: {
+          time: '3:00 PM',
+          duration: '3 Hrs.',
+          location: 'Holy Spirit Church, Margao',
+          price: 'Rs 2250 + 18% GST',
+          dates: '14th & 17th Dec',
+          contact: '+91 9529490245'
+        },
+        visuals: [
+          { key: 'margao_hotchoc', caption: 'Brass Tray of Hot Chocolate & Rum Balls' },
+          { key: 'margao_punch_bowl', caption: "Frosty's Ruby Cranberry & Orange Punch" },
+          { key: 'margao_plum_cake', caption: 'Cashew-Topped Goan Christmas Plum Cake' },
+          { key: 'margao_cookies', caption: 'Festive Cookie Icing & Sprinkles Workshop' }
+        ]
+      },
+      {
+        id: 'slide-6',
+        type: 'experience',
+        navTitle: '05 • Wanted: Christmas Socials',
+        badge: 'Experience 05 • Feni, Clues & Homemade Wine',
+        title: 'WANTED: CHRISTMAS SOCIALS',
+        description: "Explore some of Panjim's hidden gems through a fun, interactive trail, enjoy a creative session centred around Goa's beloved feni, and visit a charming Indo-Portuguese home to sip on homemade wine. Bond with fellow travellers over local food, music and festive drinks, and wrap up the evening with new connections, shared laughter and memories to cherish.",
+        itinerary: [
+          'Creative Christmas Session around Feni in one of the rarest locations of Panjim',
+          'Decipher clues and find the locations that make sure each traveller bonds and makes memories',
+          'Visit a Local Indo-Portuguese house and sip on Home made wine and let the christmas flavour sync in',
+          'Connect with fellow travellers on food, music, drinks while having the time of your lives'
+        ],
+        meta: {
+          time: '4:30 PM',
+          duration: '4 Hrs.',
+          location: 'Petisco, Panaji',
+          price: 'Rs 2799 + 18% GST',
+          dates: '19th & 26th Dec',
+          contact: '+91 9529490245'
+        },
+        visuals: [
+          { key: 'socials_panjim_dusk', caption: 'Evening Celebration Outside Panjim Heritage Facade' },
+          { key: 'socials_tavern_toast', caption: 'Toasting Craft Feni Cocktails & Homemade Wine' }
+        ]
+      },
+      {
+        id: 'slide-7',
+        type: 'experience',
+        navTitle: '06 • Festa De Natal',
+        badge: 'Experience 06 • Fontainhas Latin Quarter Quest',
+        title: 'FESTA DE NATAL',
+        description: 'Experience the magic of a traditional Goan Christmas through an exciting heritage trail in Fontainhas! Take part in a fun group challenge to retrieve stolen pieces of the Christmas crib, walk through the charming Latin Quarter, and uncover fascinating stories at every stop.',
+        itinerary: [
+          'Fun group Activity to retrieve stolen pieces of the crib',
+          'Local Goan Christmas Snacks and Sweets',
+          'Drinking Local Wine at a 150+ year old house',
+          'Carol Singing & Crib making',
+          'Walk through Fontainhas',
+          'Exciting stories at Every Spot'
+        ],
+        meta: {
+          time: '3:00 PM',
+          duration: '3.5 Hrs.',
+          location: 'Petisco, Panaji',
+          price: 'Rs 2899 + 18% GST',
+          dates: '20th & 24th Dec',
+          contact: '+91 9529490245'
+        },
+        visuals: [
+          { key: 'fontainhas_quarter', caption: 'Glowing Christmas Stars Over Fontainhas Latin Quarter' },
+          { key: 'fontainhas_quest', caption: '150+ Year Old Heritage House Wine & Stolen Crib Quest' }
+        ]
+      },
+      {
+        id: 'slide-8',
+        type: 'experience',
+        navTitle: '07 • Crib Hopping',
+        badge: 'Experience 07 • Water Cribs & Nativity Trail',
+        title: 'CRIB HOPPING',
+        description: "Discover the magic of Christmas in Goa through a festive crib trail! Visit one of Goa's beautiful water cribs, explore some of its largest and most intricate Nativity displays, and witness the creativity of local youth and artisans who bring these scenes to life. Along the way, hear heartwarming Christmas stories.",
+        itinerary: [
+          "Visit one of the Goa's water crib",
+          "Visit one of the Goa's Largest Cribs and other stunning cribs",
+          'Local youth and artisans create intricate Nativity scenes',
+          'Hear heartwarming Christmas stories and learn about Goan traditions',
+          'Experience the vibrant lights and festive atmosphere',
+          'Celebrate the community spirit of Christmas in Goa'
+        ],
+        meta: {
+          time: '5:00 PM',
+          duration: '3.5 Hrs.',
+          location: 'Imlee Jar, Colva',
+          price: 'Rs 1299 + 18% GST',
+          dates: '27th Dec',
+          contact: '+91 9529490245'
+        },
+        visuals: [
+          { key: 'crib_group_dusk', caption: 'Santa-Hatted Travellers at Dusk Water Crib Path' },
+          { key: 'crib_star_avenue', caption: 'Goan Courtyard Canopy of Giant Christmas Stars' },
+          { key: 'crib_water_panorama', caption: 'Illuminated Floating Water Crib Reflections' },
+          { key: 'crib_nativity_manger', caption: 'Intricate Thatched-Roof Nativity Manger Scene' }
+        ]
+      },
+      {
+        id: 'slide-9',
+        type: 'closing',
+        navTitle: 'Thank You & Schedule',
+        badge: 'Soul Travelling • December Festive Calendar',
+        title: 'THANK YOU',
+        subtitle: 'Celebrate a Soulful Goan Christmas With Us'
+      }
+    ];
+
+    /**
+     * ============================================================================
+     * 3. PRESENTATION STATE & DOM RENDERING
+     * ============================================================================
+     */
+    let currentSlideIndex = 0;
+    let autoPlayInterval = null;
+    let audioEnabled = false;
+    let audioSynth = null;
+    const customUploadedImages = {}; // Stores user-swapped DataURLs keyed by `slideIdx-cardIdx`
+
+    function buildPresentationDOM() {
+      const stage = document.getElementById('presentation-stage');
+      const dotsContainer = document.getElementById('slide-dots');
+      const overviewGrid = document.getElementById('overview-grid');
+      const bulbsGroup = document.getElementById('fairy-bulbs-group');
+
+      // Generate Top Twinkling Fairy Light Bulbs
+      const bulbColors = ['#ff4d5a', '#ffd54f', '#69f0ae', '#40c4ff', '#ffab40'];
+      let bulbsMarkup = '';
+      for (let i = 0; i < 36; i++) {
+        const x = 20 + i * 40;
+        const y = 11 + Math.sin(i * 0.85) * 4;
+        const color = bulbColors[i % bulbColors.length];
+        const dur = (1.8 + (i % 5) * 0.35).toFixed(2);
+        const delay = ((i % 7) * 0.25).toFixed(2);
+        bulbsMarkup += `
+          <g class="fairy-bulb" style="color:${color}; --dur:${dur}s; --delay:${delay}s;">
+            <rect x="${x - 2}" y="${y - 4}" width="4" height="4" rx="1" fill="#8d6e63"/>
+            <ellipse cx="${x}" cy="${y + 4}" rx="3.8" ry="6" fill="${color}"/>
+          </g>
+        `;
+      }
+      bulbsGroup.innerHTML = bulbsMarkup;
+
+      // Render Each Slide
+      stage.innerHTML = SLIDES_DATA.map((slide, idx) => {
+        if (slide.type === 'cover') return renderCoverSlide(slide, idx);
+        if (slide.type === 'experience') return renderExperienceSlide(slide, idx);
+        return renderClosingSlide(slide, idx);
+      }).join('');
+
+      // Render Progress Dots
+      dotsContainer.innerHTML = SLIDES_DATA.map((slide, idx) => `
+        <button onclick="goToSlide(${idx})" data-interactive
+                title="${slide.navTitle}"
+                class="slide-dot group relative h-2.5 rounded-full transition-all duration-300 ${idx === 0 ? 'w-8 bg-gold' : 'w-2.5 bg-ivory/30 hover:bg-gold/70'}">
+        </button>
+      `).join('');
+
+      // Render Overview Modal Cards
+      overviewGrid.innerHTML = SLIDES_DATA.map((slide, idx) => `
+        <button onclick="goToSlide(${idx}); toggleModal('overview-modal', false);" data-interactive
+                class="glass-pill rounded-2xl p-4 text-left flex flex-col justify-between gap-2 hover:border-gold">
+          <div class="flex items-center justify-between">
+            <span class="text-[11px] font-cinzel font-bold text-gold">SLIDE 0${idx + 1}</span>
+            ${slide.meta ? `<span class="text-[11px] px-2 py-0.5 rounded-full bg-crimson/70 text-ivory">${slide.meta.dates}</span>` : ''}
+          </div>
+          <div class="font-playfair font-bold text-base text-ivory leading-snug">${slide.title}</div>
+          <div class="text-xs text-ivory/70 line-clamp-2">${slide.subtitle || slide.description}</div>
+          ${slide.meta ? `<div class="text-[11px] text-gold font-semibold pt-1 border-t border-gold/15 flex justify-between">
+            <span>${slide.meta.location}</span>
+            <span>${slide.meta.price}</span>
+          </div>` : ''}
+        </button>
+      `).join('');
+
+      attachTiltHandlers();
+    }
+
+    function renderCoverSlide(slide, idx) {
+      const experiences = SLIDES_DATA.filter(s => s.type === 'experience');
+      return `
+        <section id="${slide.id}" class="slide-panel ${idx === 0 ? 'active' : ''} flex items-center justify-center p-2 sm:p-4">
+          <div class="glass-card rounded-3xl w-full max-w-5xl p-6 sm:p-10 md:p-12 text-center relative overflow-hidden border border-gold/35">
+            <!-- Decorative Corner Ornaments -->
+            <div class="absolute -top-12 -left-12 w-40 h-40 rounded-full bg-crimson/25 blur-2xl pointer-events-none"></div>
+            <div class="absolute -bottom-12 -right-12 w-44 h-44 rounded-full bg-gold/20 blur-2xl pointer-events-none"></div>
+
+            <!-- Soul Travelling Gold Emblem -->
+            <div class="stagger-item inline-flex items-center gap-3 px-4 py-1.5 rounded-full bg-crimson/80 border border-gold/50 mb-5" style="--stagger:0">
+              <span class="text-gold text-sm">✦</span>
+              <span class="font-cinzel text-xs sm:text-sm font-bold tracking-[0.26em] text-ivory">SOUL TRAVELLING</span>
+              <span class="text-gold text-sm">✦</span>
+            </div>
+
+            <!-- Main Dramatic Title -->
+            <h1 class="stagger-item font-cinzel text-3xl sm:text-5xl md:text-6xl font-extrabold tracking-tight leading-tight gold-shimmer mb-4" style="--stagger:1">
+              ${slide.title}
+            </h1>
+
+            <!-- Subtitle -->
+            <p class="stagger-item font-playfair italic text-base sm:text-xl md:text-2xl text-ivory/90 max-w-3xl mx-auto mb-7" style="--stagger:2">
+              ${slide.subtitle}
+            </p>
+
+            <!-- Quick-Jump Interactive Experience Badges -->
+            <div class="stagger-item flex flex-wrap items-center justify-center gap-2 sm:gap-2.5 max-w-4xl mx-auto mb-8" style="--stagger:3">
+              ${experiences.map((exp, eIdx) => `
+                <button onclick="goToSlide(${eIdx + 1})" data-interactive
+                        class="glass-pill rounded-full px-3.5 py-1.5 text-xs sm:text-sm text-ivory flex items-center gap-2">
+                  <span class="font-cinzel font-bold text-gold">0${eIdx + 1}</span>
+                  <span class="font-medium">${exp.title}</span>
+                  <span class="text-[11px] text-gold/80 hidden sm:inline">• ${exp.meta.dates}</span>
+                </button>
+              `).join('')}
+            </div>
+
+            <!-- Primary CTA Button -->
+            <div class="stagger-item flex flex-wrap items-center justify-center gap-3" style="--stagger:4">
+              <button onclick="nextSlide()" data-interactive
+                      class="group px-7 py-3.5 rounded-2xl bg-gradient-to-r from-[#f5d37d] via-gold to-[#cf9323] text-pine font-cinzel font-bold text-sm sm:text-base tracking-wider shadow-xl shadow-gold/25 hover:scale-105 transition-all flex items-center gap-2.5">
+                <span>Begin Festive Presentation</span>
+                <svg class="w-5 h-5 group-hover:translate-x-1 transition-transform" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5">
+                  <line x1="5" y1="12" x2="19" y2="12"></line>
+                  <polyline points="12 5 19 12 12 19"></polyline>
+                </svg>
+              </button>
+              <button onclick="goToSlide(8)" data-interactive
+                      class="glass-pill px-5 py-3.5 rounded-2xl text-xs sm:text-sm font-semibold text-ivory">
+                View December Schedule & Prices
+              </button>
+            </div>
+          </div>
+        </section>
+      `;
+    }
+
+    function renderExperienceSlide(slide, idx) {
+      const isFourGrid = slide.visuals.length === 4;
+      const gridClasses = isFourGrid
+        ? 'grid-cols-2 gap-2.5 sm:gap-3'
+        : 'grid-cols-1 sm:grid-cols-2 lg:grid-cols-1 gap-3';
+
+      return `
+        <section id="${slide.id}" class="slide-panel p-1.5 sm:p-3 flex items-center">
+          <div class="glass-card rounded-3xl w-full p-4 sm:p-6 lg:p-7 grid grid-cols-1 lg:grid-cols-12 gap-5 lg:gap-7 items-center my-auto">
+
+            <!-- LEFT COLUMN: BESPOKE VISUAL GALLERY & METADATA PILLS (5 cols on lg) -->
+            <div class="lg:col-span-5 flex flex-col gap-3">
+              <div class="stagger-item grid ${gridClasses}" style="--stagger:1">
+                ${slide.visuals.map((vis, vIdx) => {
+                  const frameId = `frame-${idx}-${vIdx}`;
+                  const aspectClass = isFourGrid ? 'aspect-[16/10]' : 'aspect-[16/10] lg:aspect-[16/9]';
+                  return `
+                    <div id="${frameId}" class="visual-frame group ${aspectClass}" data-interactive>
+                      <div class="sheen"></div>
+                      <!-- Clickable Artwork / Photo Container -->
+                      <div id="art-${idx}-${vIdx}" onclick="openLightbox(${idx}, ${vIdx})" class="w-full h-full cursor-pointer">
+                        ${PHOTO_ARTWORK[vis.key] || SCENE_ILLUSTRATIONS[vis.key]}
+                      </div>
+
+                      <!-- Bottom Gradient Caption & Swap Photo Button -->
+                      <div class="absolute inset-x-0 bottom-0 bg-gradient-to-t from-black/90 via-black/55 to-transparent p-2 sm:p-2.5 flex items-end justify-between gap-2">
+                        <span class="text-[10px] sm:text-[11px] text-ivory/95 font-medium leading-tight line-clamp-2">${vis.caption}</span>
+                        <label onclick="event.stopPropagation()" title="Upload your own JPG/PNG photo for this frame"
+                               class="shrink-0 px-2 py-1 rounded-lg bg-pine/85 hover:bg-crimson border border-gold/40 text-[10px] text-gold font-semibold cursor-pointer transition-colors">
+                          Swap Photo
+                          <input type="file" accept="image/*" class="hidden" onchange="handleImageUpload(event, ${idx}, ${vIdx})" />
+                        </label>
+                      </div>
+                    </div>
+                  `;
+                }).join('')}
+              </div>
+
+              <!-- Metadata Pills (Time, Duration, Location, Price, Dates, Contact) -->
+              <div class="stagger-item grid grid-cols-2 sm:grid-cols-3 lg:grid-cols-2 gap-2" style="--stagger:3">
+                <div class="glass-pill rounded-xl px-3 py-2 flex items-center gap-2">
+                  <span class="text-gold text-sm">🕒</span>
+                  <div class="min-w-0">
+                    <div class="text-[10px] uppercase tracking-wider text-ivory/60">Time & Duration</div>
+                    <div class="text-xs font-bold text-ivory truncate">${slide.meta.time} • ${slide.meta.duration}</div>
+                  </div>
+                </div>
+
+                <div class="glass-pill rounded-xl px-3 py-2 flex items-center gap-2">
+                  <span class="text-gold text-sm">📅</span>
+                  <div class="min-w-0">
+                    <div class="text-[10px] uppercase tracking-wider text-ivory/60">December Dates</div>
+                    <div class="text-xs font-bold text-gold truncate">${slide.meta.dates}</div>
+                  </div>
+                </div>
+
+                <div class="glass-pill rounded-xl px-3 py-2 flex items-center gap-2">
+                  <span class="text-gold text-sm">📍</span>
+                  <div class="min-w-0">
+                    <div class="text-[10px] uppercase tracking-wider text-ivory/60">Meeting Point</div>
+                    <div class="text-xs font-bold text-ivory truncate" title="${slide.meta.location}">${slide.meta.location}</div>
+                  </div>
+                </div>
+
+                <div class="glass-pill rounded-xl px-3 py-2 flex items-center gap-2 bg-crimson/35 border-gold/45">
+                  <span class="text-gold text-sm">🎟️</span>
+                  <div class="min-w-0">
+                    <div class="text-[10px] uppercase tracking-wider text-ivory/75">Experience Fee</div>
+                    <div class="text-xs font-bold text-gold truncate">${slide.meta.price}</div>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            <!-- RIGHT COLUMN: HEADER, DESCRIPTION, ITINERARY & CONTACT (7 cols on lg) -->
+            <div class="lg:col-span-7 flex flex-col justify-between gap-3.5">
+              <div>
+                <!-- Experience Badge -->
+                <div class="stagger-item inline-flex items-center gap-2 px-3 py-1 rounded-full bg-crimson/80 border border-gold/40 text-[11px] font-semibold tracking-wider uppercase text-gold mb-2" style="--stagger:0">
+                  <span>✦</span>
+                  <span>${slide.badge}</span>
+                </div>
+
+                <!-- Dramatic Festive Title -->
+                <h2 class="stagger-item font-cinzel text-2xl sm:text-3xl lg:text-[2.15rem] font-extrabold text-ivory leading-tight tracking-wide mb-2.5" style="--stagger:1">
+                  ${slide.title}
+                </h2>
+
+                <!-- Narrative Description -->
+                <p class="stagger-item text-xs sm:text-sm lg:text-[15px] text-ivory/85 leading-relaxed" style="--stagger:2">
+                  ${slide.description}
+                </p>
+              </div>
+
+              <!-- Festive Itinerary Box -->
+              <div class="stagger-item rounded-2xl bg-pine/65 border border-gold/25 p-3.5 sm:p-4" style="--stagger:3">
+                <div class="flex items-center justify-between mb-2.5">
+                  <span class="font-cinzel text-xs font-bold tracking-[0.18em] text-gold uppercase">Curated Festive Itinerary</span>
+                  <span class="text-[11px] text-ivory/60">${slide.itinerary.length} Highlights</span>
+                </div>
+                <ul class="grid grid-cols-1 sm:grid-cols-2 gap-2">
+                  ${slide.itinerary.map((step, sIdx) => `
+                    <li class="itinerary-step rounded-xl bg-ivory/[0.04] border border-gold/15 px-3 py-2 flex items-start gap-2.5">
+                      <span class="shrink-0 w-5 h-5 rounded-full bg-crimson border border-gold/50 text-[10px] font-bold text-gold flex items-center justify-center mt-0.5">
+                        ${sIdx + 1}
+                      </span>
+                      <span class="text-xs sm:text-[13px] text-ivory/95 leading-snug">${step}</span>
+                    </li>
+                  `).join('')}
+                </ul>
+              </div>
+
+              <!-- Direct Booking & Contact Action Bar -->
+              <div class="stagger-item flex flex-wrap items-center justify-between gap-2 pt-1" style="--stagger:4">
+                <button onclick="copyContactNumber('${slide.meta.contact}')" data-interactive
+                        class="glass-pill rounded-xl px-3.5 py-2 text-xs font-semibold text-ivory flex items-center gap-2">
+                  <span class="text-gold">📞</span>
+                  <span>${slide.meta.contact}</span>
+                  <span class="text-[10px] px-1.5 py-0.5 rounded bg-gold/20 text-gold">Copy</span>
+                </button>
+
+                <div class="flex items-center gap-2">
+                  <a href="https://wa.me/919529490245?text=${encodeURIComponent('Hi Soul Travelling! I would like to book ' + slide.title + ' (' + slide.meta.dates + ').')}"
+                     target="_blank" rel="noopener noreferrer" data-interactive
+                     class="px-4 py-2 rounded-xl bg-gradient-to-r from-[#25D366] to-[#128C7E] text-white font-bold text-xs shadow-lg hover:brightness-110 transition-all flex items-center gap-1.5">
+                    <span>Book on WhatsApp</span>
+                  </a>
+                </div>
+              </div>
+            </div>
+
+          </div>
+        </section>
+      `;
+    }
+
+    function renderClosingSlide(slide, idx) {
+      const experiences = SLIDES_DATA.filter(s => s.type === 'experience');
+      return `
+        <section id="${slide.id}" class="slide-panel p-1.5 sm:p-3 flex items-center">
+          <div class="glass-card rounded-3xl w-full p-4 sm:p-6 lg:p-8 flex flex-col gap-4 my-auto border border-gold/40">
+            <!-- Header -->
+            <div class="text-center">
+              <div class="stagger-item inline-flex items-center gap-2 px-3.5 py-1 rounded-full bg-crimson/85 border border-gold/50 text-[11px] font-cinzel font-bold tracking-[0.22em] text-ivory mb-2" style="--stagger:0">
+                <span>✦</span>
+                <span>SOUL TRAVELLING</span>
+                <span>✦</span>
+              </div>
+              <h2 class="stagger-item font-cinzel text-3xl sm:text-5xl font-extrabold gold-shimmer tracking-wide" style="--stagger:1">
+                ${slide.title}
+              </h2>
+              <p class="stagger-item font-playfair italic text-sm sm:text-lg text-ivory/90 mt-1" style="--stagger:2">
+                ${slide.subtitle}
+              </p>
+            </div>
+
+            <!-- Interactive December Calendar & Price Overview Table -->
+            <div class="stagger-item rounded-2xl border border-gold/30 overflow-hidden bg-pine/75" style="--stagger:3">
+              <div class="overflow-x-auto">
+                <table class="w-full text-left border-collapse text-xs sm:text-sm">
+                  <thead>
+                    <tr class="bg-crimson/80 text-gold font-cinzel text-[11px] uppercase tracking-wider border-b border-gold/30">
+                      <th class="py-2.5 px-3 sm:px-4">Experience</th>
+                      <th class="py-2.5 px-3">December Dates</th>
+                      <th class="py-2.5 px-3">Timing</th>
+                      <th class="py-2.5 px-3 hidden md:table-cell">Meeting Point</th>
+                      <th class="py-2.5 px-3 text-right">Price</th>
+                    </tr>
+                  </thead>
+                  <tbody class="divide-y divide-gold/15">
+                    ${experiences.map((exp, eIdx) => `
+                      <tr onclick="goToSlide(${eIdx + 1})" data-interactive
+                          class="hover:bg-gold/15 cursor-pointer transition-colors">
+                        <td class="py-2.5 px-3 sm:px-4 font-bold text-ivory">
+                          <span class="text-gold font-cinzel mr-1.5">0${eIdx + 1}.</span>${exp.title}
+                        </td>
+                        <td class="py-2.5 px-3 text-gold font-semibold whitespace-nowrap">${exp.meta.dates}</td>
+                        <td class="py-2.5 px-3 text-ivory/85 whitespace-nowrap">${exp.meta.time} (${exp.meta.duration})</td>
+                        <td class="py-2.5 px-3 text-ivory/80 hidden md:table-cell">${exp.meta.location}</td>
+                        <td class="py-2.5 px-3 text-right font-bold text-ivory whitespace-nowrap">${exp.meta.price}</td>
+                      </tr>
+                    `).join('')}
+                  </tbody>
+                </table>
+              </div>
+            </div>
+
+            <!-- Booking Actions & Replay Presentation -->
+            <div class="stagger-item flex flex-wrap items-center justify-between gap-3 pt-1" style="--stagger:4">
+              <div class="flex flex-wrap items-center gap-2">
+                <a href="tel:+919529490245" data-interactive
+                   class="glass-pill rounded-xl px-4 py-2.5 text-xs sm:text-sm font-bold text-ivory flex items-center gap-2">
+                  <span class="text-gold">📞</span>
+                  <span>Call +91 9529490245</span>
+                </a>
+                <button onclick="copyContactNumber('+91 9529490245')" data-interactive
+                        class="glass-pill rounded-xl px-3.5 py-2.5 text-xs font-semibold text-gold">
+                  Copy Number
+                </button>
+                <a href="https://wa.me/919529490245?text=${encodeURIComponent('Hi Soul Travelling! I would love to inquire about your Christmas Special Experiences in Goa.')}"
+                   target="_blank" rel="noopener noreferrer" data-interactive
+                   class="px-4 py-2.5 rounded-xl bg-gradient-to-r from-[#25D366] to-[#128C7E] text-white font-bold text-xs sm:text-sm shadow-lg hover:brightness-110 transition-all">
+                  Book via WhatsApp
+                </a>
+              </div>
+
+              <button onclick="goToSlide(0)" data-interactive
+                      class="px-5 py-2.5 rounded-xl bg-gradient-to-r from-[#f5d37d] via-gold to-[#cf9323] text-pine font-cinzel font-bold text-xs sm:text-sm tracking-wider shadow-lg hover:scale-105 transition-transform flex items-center gap-2">
+                <span>↻ Replay Presentation</span>
+              </button>
+            </div>
+          </div>
+        </section>
+      `;
+    }
+
+    /**
+     * ============================================================================
+     * 4. SLIDE NAVIGATION, TRANSITIONS, UPLOAD & LIGHTBOX LOGIC
+     * ============================================================================
+     */
+    function goToSlide(targetIdx) {
+      if (targetIdx < 0 || targetIdx >= SLIDES_DATA.length || targetIdx === currentSlideIndex) return;
+
+      const panels = document.querySelectorAll('.slide-panel');
+      const prevPanel = panels[currentSlideIndex];
+      const nextPanel = panels[targetIdx];
+
+      panels.forEach(p => p.classList.remove('prev-exit'));
+      if (prevPanel) {
+        prevPanel.classList.remove('active');
+        prevPanel.classList.add('prev-exit');
+      }
+
+      currentSlideIndex = targetIdx;
+      nextPanel.scrollTop = 0;
+      nextPanel.classList.add('active');
+
+      // Update Slide Counter & Dots
+      document.getElementById('slide-counter').textContent =
+        `0${currentSlideIndex + 1} / 0${SLIDES_DATA.length}`;
+
+      document.querySelectorAll('.slide-dot').forEach((dot, dIdx) => {
+        if (dIdx === currentSlideIndex) {
+          dot.classList.remove('w-2.5', 'bg-ivory/30');
+          dot.classList.add('w-8', 'bg-gold');
+        } else {
+          dot.classList.remove('w-8', 'bg-gold');
+          dot.classList.add('w-2.5', 'bg-ivory/30');
+        }
+      });
+
+      document.getElementById('prev-btn').disabled = currentSlideIndex === 0;
+      playHolidayChime(523.25 + currentSlideIndex * 45);
+    }
+
+    function nextSlide() {
+      const next = (currentSlideIndex + 1) % SLIDES_DATA.length;
+      goToSlide(next);
+    }
+
+    function prevSlide() {
+      const prev = (currentSlideIndex - 1 + SLIDES_DATA.length) % SLIDES_DATA.length;
+      goToSlide(prev);
+    }
+
+    function setTransitionMode(modeClass) {
+      const stage = document.getElementById('presentation-stage');
+      stage.classList.remove('mode-sleigh', 'mode-antigravity', 'mode-snow', 'mode-flip');
+      stage.classList.add(modeClass);
+      showToast(`Slide Transition: ${modeClass.replace('mode-', '').toUpperCase()}`);
+    }
+
+    function toggleAutoPlay() {
+      const dot = document.getElementById('autoplay-dot');
+      const label = document.getElementById('autoplay-label');
+      if (autoPlayInterval) {
+        clearInterval(autoPlayInterval);
+        autoPlayInterval = null;
+        dot.classList.remove('bg-gold', 'animate-ping');
+        dot.classList.add('bg-ivory/40');
+        label.textContent = 'Auto-Play';
+        showToast('Auto-Play Paused');
+      } else {
+        autoPlayInterval = setInterval(nextSlide, 6500);
+        dot.classList.remove('bg-ivory/40');
+        dot.classList.add('bg-gold', 'animate-ping');
+        label.textContent = 'Playing';
+        showToast('Auto-Play Started (6.5s per slide)');
+      }
+    }
+
+    function toggleModal(modalId, show) {
+      const el = document.getElementById(modalId);
+      if (!el) return;
+      if (show) {
+        el.classList.remove('hidden');
+        el.classList.add('flex');
+      } else {
+        el.classList.add('hidden');
+        el.classList.remove('flex');
+      }
+    }
+
+    function handleImageUpload(event, slideIdx, visualIdx) {
+      try {
+        const file = event.target.files && event.target.files[0];
+        if (!file) return;
+        const reader = new FileReader();
+        reader.onload = function(e) {
+          const dataUrl = e.target.result;
+          customUploadedImages[`${slideIdx}-${visualIdx}`] = dataUrl;
+          const container = document.getElementById(`art-${slideIdx}-${visualIdx}`);
+          if (container) {
+            container.innerHTML = `<img src="${dataUrl}" alt="Uploaded Festive Scene" class="w-full h-full object-cover" />`;
+          }
+          showToast('Custom photo applied to slide frame!');
+        };
+        reader.readAsDataURL(file);
+      } catch (err) {
+        showToast('Could not load selected image.');
+      }
+    }
+
+    function openLightbox(slideIdx, visualIdx) {
+      const slide = SLIDES_DATA[slideIdx];
+      const visual = slide.visuals[visualIdx];
+      const customImg = customUploadedImages[`${slideIdx}-${visualIdx}`];
+
+      document.getElementById('lightbox-tag').textContent = slide.title;
+      document.getElementById('lightbox-title').textContent = visual.caption;
+      const content = document.getElementById('lightbox-content');
+
+      if (customImg) {
+        content.innerHTML = `<img src="${customImg}" alt="${visual.caption}" class="max-h-[68vh] rounded-2xl shadow-2xl object-contain" />`;
+      } else {
+        content.innerHTML = `<div class="w-full max-w-3xl aspect-[16/10] rounded-2xl overflow-hidden border border-gold/40 shadow-2xl">${SCENE_ILLUSTRATIONS[visual.key]}</div>`;
+      }
+      toggleModal('lightbox-modal', true);
+    }
+
+    function copyContactNumber(phoneText) {
+      try {
+        const tempInput = document.createElement('textarea');
+        tempInput.value = phoneText;
+        tempInput.style.position = 'fixed';
+        tempInput.style.opacity = '0';
+        document.body.appendChild(tempInput);
+        tempInput.select();
+        document.execCommand('copy');
+        document.body.removeChild(tempInput);
+        showToast(`Copied ${phoneText} to clipboard!`);
+      } catch (e) {
+        showToast(`Contact: ${phoneText}`);
+      }
+    }
+
+    function copyPythonCode() {
+      try {
+        const code = document.getElementById('python-snippet').textContent;
+        const tempInput = document.createElement('textarea');
+        tempInput.value = code;
+        tempInput.style.position = 'fixed';
+        tempInput.style.opacity = '0';
+        document.body.appendChild(tempInput);
+        tempInput.select();
+        document.execCommand('copy');
+        document.body.removeChild(tempInput);
+        showToast('Python Anti-Gravity simulation copied!');
+      } catch (e) {
+        showToast('Unable to copy Python snippet');
+      }
+    }
+
+    function toggleFullScreen() {
+      try {
+        if (!document.fullscreenElement) {
+          document.documentElement.requestFullscreen();
+        } else if (document.exitFullscreen) {
+          document.exitFullscreen();
+        }
+      } catch (e) {
+        showToast('Fullscreen toggled');
+      }
+    }
+
+    let toastTimer = null;
+    function showToast(msg) {
+      const banner = document.getElementById('toast-banner');
+      document.getElementById('toast-message').textContent = msg;
+      banner.classList.remove('opacity-0', '-translate-y-3');
+      banner.classList.add('opacity-100', 'translate-y-0');
+      clearTimeout(toastTimer);
+      toastTimer = setTimeout(() => {
+        banner.classList.remove('opacity-100', 'translate-y-0');
+        banner.classList.add('opacity-0', '-translate-y-3');
+      }, 2400);
+    }
+
+    /* Optional Delicate Holiday Celesta Chimes via Tone.js */
+    async function toggleAudioChimes() {
+      try {
+        audioEnabled = !audioEnabled;
+        document.getElementById('audio-icon-off').classList.toggle('hidden', audioEnabled);
+        document.getElementById('audio-icon-on').classList.toggle('hidden', !audioEnabled);
+
+        if (audioEnabled && window.Tone) {
+          await Tone.start();
+          if (!audioSynth) {
+            audioSynth = new Tone.PolySynth(Tone.Synth, {
+              oscillator: { type: 'sine' },
+              envelope: { attack: 0.02, decay: 0.4, sustain: 0.1, release: 1.1 }
+            }).toDestination();
+            audioSynth.volume.value = -14;
+          }
+          playHolidayChime(659.25);
+          showToast('Festive Holiday Chimes Enabled');
+        } else {
+          showToast('Holiday Chimes Muted');
+        }
+      } catch (e) {
+        audioEnabled = false;
+      }
+    }
+
+    function playHolidayChime(freq) {
+      if (!audioEnabled || !audioSynth) return;
+      try {
+        audioSynth.triggerAttackRelease([freq, freq * 1.25], '16n');
+      } catch (e) {}
+    }
+
+    /* Interactive 3D Tilt on Visual Cards */
+    function attachTiltHandlers() {
+      document.querySelectorAll('.visual-frame').forEach(card => {
+        card.addEventListener('mousemove', e => {
+          const rect = card.getBoundingClientRect();
+          const x = (e.clientX - rect.left) / rect.width;
+          const y = (e.clientY - rect.top) / rect.height;
+          const rotateY = (x - 0.5) * 10;
+          const rotateX = (0.5 - y) * 10;
+          card.style.setProperty('--mx', `${x * 100}%`);
+          card.style.setProperty('--my', `${y * 100}%`);
+          card.style.transform = `perspective(900px) rotateX(${rotateX}deg) rotateY(${rotateY}deg) scale(1.015)`;
+        });
+        card.addEventListener('mouseleave', () => {
+          card.style.transform = 'perspective(900px) rotateX(0deg) rotateY(0deg) scale(1)';
+        });
+      });
+    }
+
+    /**
+     * ============================================================================
+     * 5. 60FPS ANTI-GRAVITY PHYSICS ENGINE & SPRING CHRISTMAS CURSOR TRACKER
+     * ============================================================================
+     */
+    const physicsState = {
+      mode: 'repel', // 'repel' | 'vortex' | 'float'
+      buoyancy: 0.85,
+      radius: 190,
+      swirl: 1.2
+    };
+
+    const GRAVITY_MODES = ['repel', 'vortex', 'float'];
+    const GRAVITY_LABELS = {
+      repel: 'Repel',
+      vortex: 'Vortex',
+      float: 'Gentle Float'
+    };
+
+    function cycleGravityMode() {
+      const nextIdx = (GRAVITY_MODES.indexOf(physicsState.mode) + 1) % GRAVITY_MODES.length;
+      physicsState.mode = GRAVITY_MODES[nextIdx];
+      document.getElementById('gravity-mode-label').textContent = GRAVITY_LABELS[physicsState.mode];
+      showToast(`Anti-Gravity Field: ${GRAVITY_LABELS[physicsState.mode]}`);
+    }
+
+    function updatePhysicsParam(param, val) {
+      const num = parseFloat(val);
+      physicsState[param] = num;
+      if (param === 'buoyancy') document.getElementById('val-buoyancy').textContent = num.toFixed(2);
+      if (param === 'radius') document.getElementById('val-radius').textContent = `${Math.round(num)}px`;
+      if (param === 'swirl') document.getElementById('val-swirl').textContent = num.toFixed(2);
+    }
+
+    function initAntiGravityAndCursor() {
+      const canvas = document.getElementById('antigravity-canvas');
+      const ctx = canvas.getContext('2d');
+      const cursorEl = document.getElementById('christmas-cursor');
+      const haloEl = document.getElementById('cursor-halo');
+
+      let width = canvas.width = window.innerWidth;
+      let height = canvas.height = window.innerHeight;
+
+      window.addEventListener('resize', () => {
+        width = canvas.width = window.innerWidth;
+        height = canvas.height = window.innerHeight;
+      });
+
+      // Cursor Spring Tracker State
+      const mouse = { x: width / 2, y: height / 2, active: false };
+      const cursorPos = { x: width / 2, y: height / 2, angle: 0 };
+      const haloPos = { x: width / 2, y: height / 2 };
+
+      // Ambient Anti-Gravity Objects (Golden Baubles, Glass Orbs, Snowflakes, Fairy Sparks)
+      const ORNAMENT_COUNT = Math.min(72, Math.floor((width * height) / 18000));
+      const ornaments = Array.from({ length: Math.max(36, ORNAMENT_COUNT) }, (_, i) => {
+        const types = ['bauble-gold', 'bauble-crimson', 'glass-orb', 'snowflake', 'star-spark'];
+        return {
+          x: Math.random() * width,
+          y: Math.random() * height,
+          vx: (Math.random() - 0.5) * 0.4,
+          vy: -(0.25 + Math.random() * 0.65),
+          size: 4 + Math.random() * 11,
+          phase: Math.random() * Math.PI * 2,
+          spin: (Math.random() - 0.5) * 0.025,
+          rotation: Math.random() * Math.PI * 2,
+          type: types[i % types.length]
+        };
+      });
+
+      // Trail & Click Burst Particles
+      const trailParticles = [];
+
+      function spawnTrailParticle(x, y, burst = false) {
+        const kinds = ['snowflake', 'gold-star', 'holly-berry'];
+        const kind = kinds[Math.floor(Math.random() * kinds.length)];
+        const speed = burst ? (1.8 + Math.random() * 4.5) : (0.4 + Math.random() * 1.4);
+        const angle = Math.random() * Math.PI * 2;
+        trailParticles.push({
+          x,
+          y,
+          vx: Math.cos(angle) * speed,
+          vy: Math.sin(angle) * speed - (burst ? 1.2 : 0.45), // Anti-gravity drift
+          size: burst ? (3.5 + Math.random() * 4.5) : (2.5 + Math.random() * 3.5),
+          life: 1.0,
+          decay: burst ? (0.018 + Math.random() * 0.015) : (0.024 + Math.random() * 0.018),
+          rotation: Math.random() * Math.PI * 2,
+          kind
+        });
+      }
+
+      window.addEventListener('mousemove', e => {
+        mouse.x = e.clientX;
+        mouse.y = e.clientY;
+        mouse.active = true;
+
+        // Emit sparkling snowflakes, mini stars & holly berries along cursor movement
+        if (Math.random() < 0.72) {
+          spawnTrailParticle(mouse.x, mouse.y, false);
+        }
+
+        // Expand golden halo when hovering over interactive elements
+        const interactiveTarget = e.target && e.target.closest('[data-interactive], button, a, select, input');
+        if (interactiveTarget) {
+          haloEl.classList.add('hovering');
+        } else {
+          haloEl.classList.remove('hovering');
+        }
+      });
+
+      window.addEventListener('mousedown', e => {
+        mouse.x = e.clientX;
+        mouse.y = e.clientY;
+        // Celebratory burst of snowflakes & golden stardust on click
+        for (let i = 0; i < 22; i++) {
+          spawnTrailParticle(mouse.x, mouse.y, true);
+        }
+        playHolidayChime(880);
+      });
+
+      function drawSnowflake(x, y, r, rot, alpha) {
+        ctx.save();
+        ctx.translate(x, y);
+        ctx.rotate(rot);
+        ctx.strokeStyle = `rgba(253, 248, 239, ${alpha})`;
+        ctx.lineWidth = 1.25;
+        for (let i = 0; i < 6; i++) {
+          ctx.rotate(Math.PI / 3);
+          ctx.beginPath();
+          ctx.moveTo(0, 0);
+          ctx.lineTo(0, -r);
+          ctx.moveTo(0, -r * 0.55);
+          ctx.lineTo(-r * 0.28, -r * 0.78);
+          ctx.moveTo(0, -r * 0.55);
+          ctx.lineTo(r * 0.28, -r * 0.78);
+          ctx.stroke();
+        }
+        ctx.restore();
+      }
+
+      function drawMiniStar(x, y, r, rot, alpha) {
+        ctx.save();
+        ctx.translate(x, y);
+        ctx.rotate(rot);
+        ctx.fillStyle = `rgba(230, 184, 76, ${alpha})`;
+        ctx.beginPath();
+        for (let i = 0; i < 4; i++) {
+          const a = (i * Math.PI) / 2;
+          ctx.lineTo(Math.cos(a) * r, Math.sin(a) * r);
+          ctx.lineTo(Math.cos(a + Math.PI / 4) * (r * 0.35), Math.sin(a + Math.PI / 4) * (r * 0.35));
+        }
+        ctx.closePath();
+        ctx.fill();
+        ctx.restore();
+      }
+
+      function animateLoop(time) {
+        ctx.clearRect(0, 0, width, height);
+
+        // 1. Update Spring-Physics Custom Christmas Cursor Tracker
+        cursorPos.x += (mouse.x - cursorPos.x) * 0.36;
+        cursorPos.y += (mouse.y - cursorPos.y) * 0.36;
+        cursorPos.angle = Math.sin(time * 0.0025) * 14;
+
+        haloPos.x += (mouse.x - haloPos.x) * 0.16;
+        haloPos.y += (mouse.y - haloPos.y) * 0.16;
+
+        cursorEl.style.transform = `translate3d(${cursorPos.x - 15}px, ${cursorPos.y - 15}px, 0) rotate(${cursorPos.angle}deg)`;
+        const haloOffset = haloEl.classList.contains('hovering') ? 32 : 22;
+        haloEl.style.transform = `translate3d(${haloPos.x - haloOffset}px, ${haloPos.y - haloOffset}px, 0)`;
+
+        // 2. Step Anti-Gravity Physics on Floating Ornaments & Snowflakes
+        for (let i = 0; i < ornaments.length; i++) {
+          const o = ornaments[i];
+          o.phase += 0.022;
+          o.rotation += o.spin;
+
+          // Harmonic Anti-Gravity Upward Buoyancy + Gentle Sine Sway
+          const targetVy = -0.35 * physicsState.buoyancy;
+          o.vy += (targetVy - o.vy) * 0.04;
+          o.vx += Math.sin(o.phase) * 0.008;
+
+          // Cursor Force Field Interaction (Repel / Vortex / Gentle Float)
+          if (mouse.active && physicsState.mode !== 'float') {
+            const dx = o.x - mouse.x;
+            const dy = o.y - mouse.y;
+            const dist = Math.hypot(dx, dy) || 0.001;
+            if (dist < physicsState.radius) {
+              const falloff = 1 - dist / physicsState.radius;
+              const nx = dx / dist;
+              const ny = dy / dist;
+              const tx = -ny;
+              const ty = nx;
+
+              if (physicsState.mode === 'repel') {
+                o.vx += (nx * 0.85 + tx * 0.25 * physicsState.swirl) * falloff;
+                o.vy += (ny * 0.85 + ty * 0.25 * physicsState.swirl) * falloff;
+              } else if (physicsState.mode === 'vortex') {
+                o.vx += (tx * 0.95 * physicsState.swirl - nx * 0.28) * falloff;
+                o.vy += (ty * 0.95 * physicsState.swirl - ny * 0.28) * falloff;
+              }
+            }
+          }
+
+          // Velocity Damping & Position Integration
+          o.vx *= 0.96;
+          o.vy *= 0.97;
+          o.x += o.vx;
+          o.y += o.vy;
+
+          // Seamless Anti-Gravity Screen Wrapping (Floats from bottom to top)
+          if (o.y < -30) {
+            o.y = height + 30;
+            o.x = Math.random() * width;
+          } else if (o.y > height + 30) {
+            o.y = -30;
+          }
+          if (o.x < -30) o.x = width + 30;
+          if (o.x > width + 30) o.x = -30;
+
+          // Render Ornament by Type
+          if (o.type === 'bauble-gold') {
+            const grad = ctx.createRadialGradient(o.x - o.size * 0.3, o.y - o.size * 0.3, 1, o.x, o.y, o.size);
+            grad.addColorStop(0, 'rgba(255, 246, 204, 0.85)');
+            grad.addColorStop(0.55, 'rgba(230, 184, 76, 0.52)');
+            grad.addColorStop(1, 'rgba(184, 125, 20, 0.15)');
+            ctx.fillStyle = grad;
+            ctx.beginPath();
+            ctx.arc(o.x, o.y, o.size, 0, Math.PI * 2);
+            ctx.fill();
+          } else if (o.type === 'bauble-crimson') {
+            const grad = ctx.createRadialGradient(o.x - o.size * 0.3, o.y - o.size * 0.3, 1, o.x, o.y, o.size);
+            grad.addColorStop(0, 'rgba(255, 180, 185, 0.75)');
+            grad.addColorStop(0.6, 'rgba(166, 28, 38, 0.48)');
+            grad.addColorStop(1, 'rgba(90, 10, 18, 0.12)');
+            ctx.fillStyle = grad;
+            ctx.beginPath();
+            ctx.arc(o.x, o.y, o.size * 0.9, 0, Math.PI * 2);
+            ctx.fill();
+          } else if (o.type === 'glass-orb') {
+            ctx.strokeStyle = 'rgba(230, 184, 76, 0.35)';
+            ctx.lineWidth = 1.1;
+            ctx.beginPath();
+            ctx.arc(o.x, o.y, o.size * 1.1, 0, Math.PI * 2);
+            ctx.stroke();
+          } else if (o.type === 'snowflake') {
+            drawSnowflake(o.x, o.y, o.size * 0.78, o.rotation, 0.42);
+          } else {
+            drawMiniStar(o.x, o.y, o.size * 0.65, o.rotation, 0.55);
+          }
+        }
+
+        // 3. Render & Age Cursor Trail & Click Burst Particles
+        for (let i = trailParticles.length - 1; i >= 0; i--) {
+          const p = trailParticles[i];
+          p.x += p.vx;
+          p.y += p.vy;
+          p.vy -= 0.025; // Slight anti-gravity lift on sparkles
+          p.rotation += 0.05;
+          p.life -= p.decay;
+
+          if (p.life <= 0) {
+            trailParticles.splice(i, 1);
+            continue;
+          }
+
+          if (p.kind === 'snowflake') {
+            drawSnowflake(p.x, p.y, p.size * 1.35, p.rotation, p.life * 0.9);
+          } else if (p.kind === 'gold-star') {
+            drawMiniStar(p.x, p.y, p.size * 1.45, p.rotation, p.life);
+          } else {
+            ctx.fillStyle = `rgba(198, 40, 40, ${p.life * 0.9})`;
+            ctx.beginPath();
+            ctx.arc(p.x, p.y, p.size * 0.85, 0, Math.PI * 2);
+            ctx.fill();
+          }
+        }
+
+        requestAnimationFrame(animateLoop);
+      }
+
+      requestAnimationFrame(animateLoop);
+    }
+
+    /**
+     * ============================================================================
+     * 6. KEYBOARD, WHEEL & TOUCH SWIPE CONTROLS
+     * ============================================================================
+     */
+    function initInputListeners() {
+      window.addEventListener('keydown', e => {
+        if (e.target.tagName === 'INPUT' || e.target.tagName === 'SELECT' || e.target.tagName === 'TEXTAREA') return;
+        if (e.key === 'ArrowRight' || e.key === ' ') {
+          e.preventDefault();
+          nextSlide();
+        } else if (e.key === 'ArrowLeft') {
+          e.preventDefault();
+          prevSlide();
+        } else if (e.key.toLowerCase() === 'f') {
+          toggleFullScreen();
+        } else if (e.key === 'Escape') {
+          toggleModal('overview-modal', false);
+          toggleModal('lightbox-modal', false);
+          toggleModal('physics-modal', false);
+        }
+      });
+
+      // Touch Swipe Support for Mobile & Tablets
+      let touchStartX = 0;
+      let touchStartY = 0;
+      const stage = document.getElementById('presentation-stage');
+
+      stage.addEventListener('touchstart', e => {
+        touchStartX = e.changedTouches[0].screenX;
+        touchStartY = e.changedTouches[0].screenY;
+      }, { passive: true });
+
+      stage.addEventListener('touchend', e => {
+        const dx = e.changedTouches[0].screenX - touchStartX;
+        const dy = e.changedTouches[0].screenY - touchStartY;
+        if (Math.abs(dx) > 55 && Math.abs(dx) > Math.abs(dy) * 1.4) {
+          if (dx < 0) nextSlide();
+          else prevSlide();
+        }
+      }, { passive: true });
+    }
+
+    // Boot Presentation on Window Load
+    window.onload = function() {
+      buildPresentationDOM();
+      initAntiGravityAndCursor();
+      initInputListeners();
+      document.getElementById('prev-btn').disabled = true;
+    };
+  </script>
+</body>
+</html>
